@@ -17,18 +17,18 @@ class NavBar extends React.Component {
     getLinks() {
         if (this.props.loggedIn) {
             return (
-                <div>
+                <div className="session-links">
                     {/* <Link to={'/tweets'}>All Tweets</Link> */}
-                    <Link to={'/profile'}>Profile</Link>
+                    <Link className="nav-links" to={'/profile'}>Profile</Link>
                     {/* <Link to={'/new_tweet'}>Write a Tweet</Link> */}
-                    <button onClick={this.logoutUser}>Logout</button>
+                    <button className="nav-links" onClick={this.logoutUser}>Logout</button>
                 </div>
             );
         } else {
             return (
-                <div>
-                    <Link to={'/signup'}>Signup</Link>
-                    <Link to={'/login'}>Login</Link>
+                <div className="session-links">
+                    <Link className="nav-links" to={'/signup'}>Signup</Link>
+                    <Link className="nav-links" to={'/login'}>Login</Link>
                 </div>
             );
         }
@@ -36,11 +36,13 @@ class NavBar extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>BeastMode</h1>
+            <div className="nav">
+                <img id="logo" src={ process.env.PUBLIC_URL + '/image-assets/logo-white.png' } />    
+                <h1 id="logo-str">BEASTMODE</h1>
+                {/* <img id="menu" src="../image-assets/menu-white.png" alt="menu"> */}
                 {this.getLinks()}
             </div>
-        );
+        ); 
     }
 }
 
