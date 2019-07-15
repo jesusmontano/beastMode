@@ -12,7 +12,7 @@ class Exercise extends React.Component {
     // debugger
     if (!this.props.exercises.length) {
       return (
-        <div>There are no exercises.</div>
+        <div>There are no exercises here.</div>
       )
     }
     return (
