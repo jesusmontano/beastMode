@@ -44,10 +44,10 @@ class SignupForm extends React.Component {
 
     renderErrors() {
         return (
-            <ul>
+            <ul id="error-ul">
                 {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {this.state.errors[error]}
+                    <li key={`error-${i}`} id="error-li">
+                        <img id="error-img" src={ process.env.PUBLIC_URL + '/image-assets/exclamation-white.png'}/>{this.state.errors[error]}
                     </li>
                 ))}
             </ul>
@@ -56,9 +56,9 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div className="login-form-container">
+            <div className="session-form-container">
                 <form onSubmit={this.handleSubmit}>
-                    <div className="login-form">
+                    <div className="session-form">
                         <br />
                         <input type="text"
                             value={this.state.email}
@@ -84,7 +84,7 @@ class SignupForm extends React.Component {
                             placeholder="Confirm Password"
                         />
                         <br />
-                        <input type="submit" value="Submit" />
+                        <input id="submit-button" type="submit" value="Submit" />
                         {this.renderErrors()}
                     </div>
                 </form>

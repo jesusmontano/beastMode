@@ -115,3 +115,65 @@ font-family: 'Aldrich', sans-serif;
 font-family: 'Black Ops One', cursive;
 font-family: 'Space Mono', monospace;
 */
+
+/* SessionFormStyling */
+.session-form-container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    padding-top: 18vh;
+}
+
+.session-form {
+    background-image: url("../image-assets/jesper-aggergaard-oc7tGf44rM0-unsplash.jpg");
+    background-size: 213vw;
+    width: 100vw;
+    height: 50vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+.session-form > input {
+    height: 5vh;
+    width: 58vw;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3px 5px;
+    margin: -9px 86px;
+}
+
+#submit-button{
+    width: 20vw;
+    background: white;
+    color: black;
+    position: relative;
+    left: 18%;
+    top: 9%;
+    border-radius: 30px;
+    outline: none;
+}
+#submit-button:hover {
+    background: green;
+    box-shadow: 0 5px 5px black;
+}
+#submit-button:focus {
+    background: green;
+}
+
+#error-ul{
+    left: 25vw;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    text-align: -webkit-left;
+    width: 56vw;
+    color: white;
+    top: 7vh;
+    position: relative;
+}
+#error-img{
+     height: 10px;
+}
