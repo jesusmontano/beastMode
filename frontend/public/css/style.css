@@ -177,3 +177,24 @@ font-family: 'Space Mono', monospace;
 #error-img{
      height: 10px;
 }
+
+.login-form{
+    background-image: url('../image-assets/victor-freitas-Ovlel6acNac-unsplash.jpg');
+    background-size: 213vw;
+    width: 100vw;
+    height: 50vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+.login-form > input {
+    height: 5vh;
+    width: 58vw;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3px 5px;
+    margin: -9px 86px;
+}
