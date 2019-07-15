@@ -3,11 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
-<<<<<<< HEAD
 const exercises = require("./routes/api/exercises");
-=======
-const path = require('path')
->>>>>>> a0fe386dd7b130bb880208e62dbd06ad4b0c44ea
 const workouts = require("./routes/api/workouts");
 const User = require('./models/User');
 const bodyParser = require("body-parser");
