@@ -32,11 +32,19 @@ export default class WorkoutCreate extends React.Component {
         // e.preventDefault();
 
         let equipmentAndCategory = this.props.exercises.filter(exercise => {
-            if (this.state.category === exercise.body_part && String(this.state.equipment) === exercise.equipment) {                
+            if (this.state.category === exercise.body_part && this.state.equipment === exercise.equipment) {                
                 return exercise;
             }
         });
 
+        
+        while (equipmentAndCategory.length <= 3) {
+            this.props.exercises.filter(exercise => {
+                if ( exercise.body_part === "Abdominals" && exercise.equipment === false ) {
+                    equipmentAndCategory.push(exercise);
+                }
+        })
+    }
 
         let fatiguedAdjusted = equipmentAndCategory.filter(exercise => {
             if (this.state.difficulty === 0) {
@@ -58,7 +66,7 @@ export default class WorkoutCreate extends React.Component {
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-    
+        
                 let workout = {
                     category: this.state.category,
                     difficulty: this.state.fatigue,
@@ -71,10 +79,10 @@ export default class WorkoutCreate extends React.Component {
 
             this.props.composeWorkout(workout)
             .then((workout) => {
-                let workoutId = workout.workout.data._id
-                return (this.props.history.push(`/workout_show/${workoutId}`))
+                let workoutId = workout.workout.data._id;
+                this.props.history.push(`/workout_show/${workoutId}`)
             });
-            
+
     }
 
     // componentWillMount() {
@@ -130,12 +138,12 @@ export default class WorkoutCreate extends React.Component {
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-
-        var check = this.props.exercises
         if (this.state.category !== "" && this.state.fatigue !== ""
             && this.state.equipment !== "") {
-              return(this.handleSubmit())
+              (this.handleSubmit());
+              return "";
         }
+
         return (
             <div>
                 
