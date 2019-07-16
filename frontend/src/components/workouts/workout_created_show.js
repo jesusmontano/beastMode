@@ -68,7 +68,7 @@ class WorkoutCreateShow extends React.Component {
        
         // debugger
 
-        console.log(workoutObj)
+        
         return(
             <div>
                 <h2>{workoutObj.category}</h2>
@@ -78,15 +78,15 @@ class WorkoutCreateShow extends React.Component {
 
 
                 <div>{exerciseArr[0].name}</div>
-                <div>Do {exerciseArr[0].reps} for {exerciseArr[0].sets} sets</div>
+                <div>Do {exerciseArr[0].reps} reps for {exerciseArr[0].sets} sets</div>
                 <br />
 
                 <div>{exerciseArr[1].name}</div>
-                <div>Do {exerciseArr[1].reps} for {exerciseArr[1].sets} sets</div>
+                <div>Do {exerciseArr[1].reps} reps for {exerciseArr[1].sets} sets</div>
                 <br />
 
                 <div>{exerciseArr[2].name}</div>
-                <div>Do {exerciseArr[2].reps} for {exerciseArr[2].sets} sets</div>
+                <div>Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
                 <br />
             </div>
         )
