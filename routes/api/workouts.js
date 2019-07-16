@@ -23,6 +23,14 @@ router.get('user/:user_id', (req, res) => {
             res.status(404).json({ noworkoutsfound: 'No workouts found from that user' }));
 });
 
+// Get workout by id 
+router.get('/:id', (req, res) => {
+    Workout.findById(req.params.id)
+        .then(workout => res.json(workout))
+        .catch(err =>
+            res.status(404).json({ noworkoutsfound: 'No workouts found' }));
+});
+
 
 // Create a workout 
 router.post('/create', (req, res) => {
@@ -44,5 +52,16 @@ router.post('/create', (req, res) => {
         .save()
         .then(workout => res.json(workout));
 });
+
+
+router.patch('/:id', (req, res) => {
+    Workout.findById(req.params.id)
+        .then(workout => {
+        workout.rating = req.body.rating;
+            workout.save().then(workout => res.json(workout)).catch(err => res.status(404).json(err));
+    });
+});
+
+
 
 module.exports = router;

@@ -5,7 +5,6 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 
 import WorkoutBox from './workout_show';
-import {AnimateOnChange} from 'react-animation';
 
 
 export default class WorkoutCreate extends React.Component {
@@ -30,15 +29,45 @@ export default class WorkoutCreate extends React.Component {
   
 
     handleSubmit() {
+        // e.preventDefault();
+
+        let equipmentAndCategory = this.props.exercises.filter(exercise => {
+            if (this.state.category === exercise.body_part && String(this.state.equipment) === exercise.equipment) {                
+                return exercise;
+            }
+        });
+
+
+        let fatiguedAdjusted = equipmentAndCategory.filter(exercise => {
+            if (this.state.difficulty === 0) {
+                if (exercise.difficulty === "Advanced" || exercise.difficulty === "Intermediate") {
+                    return exercise;
+                }
+            } else if (this.state.difficulty === 1) {
+                if (exercise.difficulty === "Intermediate") {
+                    return exercise;
+                }
+            } else {
+                if (exercise.difficulty === "Beginner") {
+                    return exercise;
+                }
+            }
+        });
+
         
+
+        let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    
                 let workout = {
                     category: this.state.category,
                     difficulty: this.state.fatigue,
                     equipment: this.state.equipment,
-                    exercise1_id: "5d2a98851c9d44000092463a",
-                    exercise2_id: "5d2b70db1c9d440000251d53", 
-                    exercise3_id: "5d2cc5c61c9d440000a9c410"
+                    exercise1_id: seletctedExercises[0]._id,
+                    exercise2_id: seletctedExercises[1]._id, 
+                    exercise3_id: seletctedExercises[2]._id
                 };
+
 
             this.props.composeWorkout(workout)
             .then((workout) => {
@@ -63,11 +92,19 @@ export default class WorkoutCreate extends React.Component {
     }
 
     handleChangeEquipment(event) {
+        let val;
+
+        if (event.target.value === "yes") {
+            val = true;
+        } else {
+            val = false;
+        }
         
-        this.setState({ equipment: event.target.value });
+        this.setState({ equipment: val });
     }
 
     render() {
+
 
         let equipmentAndCategory = this.props.exercises.filter(exercise => {
             if (this.state.category === exercise.category && this.state.equipment === exercise.equipment) {
@@ -93,24 +130,28 @@ export default class WorkoutCreate extends React.Component {
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
 
+
         var check = this.props.exercises
         if (this.state.category !== "" && this.state.fatigue !== ""
             && this.state.equipment !== "") {
               return(this.handleSubmit())
         }
         return (
-            <div className="generate-container">
-                <form onSubmit={this.handleSubmit}  className="generate-form">
-                    <div className={ this.state.category === "" ? "form-container category" : "slide" } value={ this.state.category }>
-                        <fieldset  >
-                            <legend> What do you want to work out?</legend>
-                            <div className="options" onChange={ this.handleChangeCategory }>  
-                                <input type="radio" name="category" value="Arms"></input><label>Arms</label>
-                                <input type="radio" name="category" value="Chest"></input><label>Chest</label>
-                                <input type="radio" name="category" value="Back"></input><label>Back</label>
-                                <input type="radio" name="category" value="Legs"></input><label>Legs</label>
-                            </div>
-                        </fieldset>
+            <div>
+                
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <label>
+                            What do you want to work out?:
+                            <select value={this.state.category} onChange={this.handleChangeCategory}>
+                                {/* <option name="category" defaultValue=""></option> */}
+                                <option name="category" value="Arms">Arms</option>
+                                <option name="category" value="Abdominals">Abdominals</option>
+                                <option name="category" value="Chest">Chest</option>
+                                <option name="category" value="Back">Back</option>
+                                <option name="category" value="Legs">Legs</option>
+                            </select>
+                        </label>
                     </div>
                         {/* <legend>Great, let's work out our { this.state.category }!</legend> */}
                     <div className="form-container" className={ this.state.fatigue === "" ? "fatigue" : "slide" } value={ this.state.fatigue } onChange={ this.handleChangeFatigue }>
