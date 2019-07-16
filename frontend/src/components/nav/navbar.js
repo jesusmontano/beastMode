@@ -37,8 +37,10 @@ class NavBar extends React.Component {
     render() {
         return (
             <div className="nav">
-                <img id="logo" src={ process.env.PUBLIC_URL + '/image-assets/logo-white.png' } />    
-                <h1 id="logo-str">BEASTMODE</h1>
+                <Link to="/">
+                  <img id="logo" src={process.env.PUBLIC_URL + '/image-assets/logo-white.png'} />
+                  <h1 id="logo-str">BEASTMODE</h1>
+                </Link>
                 {/* <img id="menu" src="../image-assets/menu-white.png" alt="menu"> */}
                 {this.getLinks()}
             </div>
