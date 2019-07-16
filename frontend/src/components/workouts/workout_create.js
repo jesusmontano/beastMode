@@ -5,7 +5,6 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 
 import WorkoutBox from './workout_show';
-import {AnimateOnChange} from 'react-animation';
 
 
 export default class WorkoutCreate extends React.Component {
@@ -121,7 +120,6 @@ export default class WorkoutCreate extends React.Component {
         }
 
         return (
-<<<<<<< HEAD
             <div>
                 
                 <form onSubmit={this.handleSubmit}>
@@ -137,22 +135,6 @@ export default class WorkoutCreate extends React.Component {
                                 <option name="category" value="Legs">Legs</option>
                             </select>
                         </label>
-=======
-            <div className="generate-container">
-
-                <form onSubmit={this.handleSubmit}  className="generate-form">
-                       <div className="form-container">
-                        <fieldset className={ this.state.category === "" ? "category" : "slide" } value={this.state.category} onChange={this.handleChangeCategory}>
-                            <legend> What do you want to work out?</legend>
-                        <div className="options">  
-                                <input type="radio" name="category" value="Arms"></input><label>Arms</label>
-                                <input type="radio" name="category" value="Shoulders"></input><label>Shoulders</label>
-                                <input type="radio" name="category" value="Chest"></input><label>Chest</label>
-                                <input type="radio" name="category" value="Back"></input><label>Back</label>
-                                <input type="radio" name="category" value="Legs"></input><label>Legs</label>
-                            </div>
-                        </fieldset>
->>>>>>> afcb88fd6331bf89cc84a461d8f8b778e4802e6b
                     </div>
                         {/* <legend>Great, let's work out our { this.state.category }!</legend> */}
                     <div className="form-container">
@@ -180,10 +162,6 @@ export default class WorkoutCreate extends React.Component {
 
 
             </div>
-
-           
-         </div>
-
         )
     }
 }

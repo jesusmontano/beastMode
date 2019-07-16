@@ -102,14 +102,17 @@ class WorkoutCreateShow extends React.Component {
 
 
                 <div>{exerciseArr[0].name}</div>
+                <img src={exerciseArr[0].image} />
                 <div>Do {exerciseArr[0].reps} reps for {exerciseArr[0].sets} sets</div>
                 <br />
 
                 <div>{exerciseArr[1].name}</div>
+                <img src={exerciseArr[1].image} />
                 <div>Do {exerciseArr[1].reps} reps for {exerciseArr[1].sets} sets</div>
                 <br />
 
                 <div>{exerciseArr[2].name}</div>
+                <img src={exerciseArr[2].image} />
                 <div>Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
                 <br />
 
