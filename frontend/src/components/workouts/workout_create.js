@@ -152,9 +152,6 @@ export default class WorkoutCreate extends React.Component {
 
             </div>
 
-           
-         </div>
-
         )
     }
 }
