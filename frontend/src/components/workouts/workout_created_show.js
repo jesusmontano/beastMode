@@ -4,6 +4,7 @@ import { fetchAllExercises } from '../../actions/exercise_actions';
 import Workout from './workouts';
 import React from 'react';
 
+
 const mapStateToProps = (state, ownProps) => {
     const workoutId = ownProps.match.params.workoutId
     return {
@@ -70,10 +71,15 @@ class WorkoutCreateShow extends React.Component {
 
         
         return(
-            <div>
-                <h2>{workoutObj.category}</h2>
+            <div className= "fullscreen-workout">
+                <video autoPlay loop id="background-video">
+                    <source src={ process.env.PUBLIC_URL + '/image-assets/workout-background.mp4' } type="video/mp4"></source>
+                </video>
+                <div id="black"></div>
+            <div className= "workout-container">
+                <div id="workout-title">{workoutObj.category}</div>
 
-                <h3>{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</h3>
+                <div id="workout-equipment">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
                 <br />
 
 
@@ -88,6 +94,7 @@ class WorkoutCreateShow extends React.Component {
                 <div>{exerciseArr[2].name}</div>
                 <div>Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
                 <br />
+            </div>
             </div>
         )
     }
