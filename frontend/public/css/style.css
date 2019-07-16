@@ -87,6 +87,11 @@ button {
     
     outline: none;
 }
+
+.link-new-workout{
+    text-decoration: none;
+    color: white;
+}
 #btn-generate{
     padding: 0 7vw;
 }
@@ -229,7 +234,6 @@ font-family: 'Space Mono', monospace;
     width: 70vw;
     height: 55vh;
     background: rgb(11, 36, 79);
-    border-radius: 20px;
     padding: 5vh 5vw;
     left: 10vw;
     resize: vertical;
@@ -267,7 +271,6 @@ input[type="radio"] {
     width: 70vw;
     height: 55vh;
     background: rgb(35, 35, 116);
-    border-radius: 20px;
     padding: 5vh 5vw;
     left: 10vw;
     resize: vertical;
@@ -279,7 +282,6 @@ input[type="radio"] {
     width: 70vw;
     height: 55vh;
     background: rgb(34, 47, 69);
-    border-radius: 20px;
     padding: 5vh 5vw;
     left: 10vw;
     resize: vertical;
@@ -309,18 +311,18 @@ input[type="radio"] {
         position: relative;
         margin: auto;
     }
-  .options{
-    justify-content: space-evenly;
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    width: 44vw;
-  }
+    .options{
+        justify-content: space-evenly;
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        width: 44vw;
+        margin-top: 4vh;
+    }
     .category {
         height: 20vh;
         width: 40vw;
         background: rgb(35, 35, 116);
-        border-radius: 20px;
         padding: 5vh 5vw;
         margin: auto;
         display: inline;
@@ -331,7 +333,6 @@ input[type="radio"] {
         height: 20vh;
         width: 40vw;
         background: rgb(34, 47, 69);
-        border-radius: 20px;
         padding: 5vh 5vw;
         margin: auto;
         display: inline;
@@ -341,7 +342,6 @@ input[type="radio"] {
         height: 20vh;
         width: 40vw;
         background: rgb(11, 36, 79);
-        border-radius: 20px;
         padding: 5vh 5vw;
         display: inline;
         position: absolute;
@@ -352,7 +352,7 @@ legend{
     font-size: 27px;
     font-family: 'Aldrich', sans-serif;;
     margin: auto;
-    padding-top: 12vh;
+    padding-top: 6vh;
 }
 label {
     color: white;
@@ -367,10 +367,67 @@ input[type="radio"] {
  }
  
  .slide {
-   transform: translateX(2000px);
-   transition: all 0.5s;
+   transform: scaleX(-1) translate(-2000px) ;
+   transition-duration: 3s;
+   /* perspective: 1000px; */
  
  }
+ fieldset {
+     margin-left: -2vw;
+ }
+
+}
 
 
+.fullscreen-workout{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+}
+
+#black{
+    position: relative;
+    top: -103vh;
+    min-width: 6vw;
+    min-height: 20vh;
+    display: inline-block;
+    z-index: 0;
+    background: black;
+
+}
+#background-video{
+    min-width: 100vw;
+    height: 100vh;
+    display: inline;
+    position:relative;
+}
+.workout-container{
+    width: 20vw;
+    margin: auto;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 29vh;
+    left: 39vw;
+    min-height: 48vh;
+    padding: 1vh 1vw;
+}
+#workout-title{
+    color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    
+    padding: 4px;
+    margin: 4px;
+}
+
+#workout-equipment{
+    
+}
+.workout-container > div {
+color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
 }

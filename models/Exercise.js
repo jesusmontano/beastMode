@@ -27,14 +27,10 @@ const ExerciseSchema = new Schema({
     required: true
   },
   equipment: {
-    type: String,
+    type: Boolean,
     required: true
   },
-  instructions: {
-    type: String,
-    required: true
-  },
-  video: {
+  image: {
     type: String,
     required: false
   }

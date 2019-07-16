@@ -16,8 +16,6 @@ export default class WorkoutCreate extends React.Component {
             category: "",
             fatigue: "",
             equipment: "",
-
-  
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -78,10 +76,7 @@ export default class WorkoutCreate extends React.Component {
                 return (this.props.history.push(`/workout_show/${workoutId}`))
             });
             
-        }
-
-        
-    
+    }
 
     // componentWillMount() {
     //     // this.props.fetchWorkouts();
@@ -109,19 +104,41 @@ export default class WorkoutCreate extends React.Component {
         this.setState({ equipment: val });
     }
 
-
-
-
     render() {
+
+
+        let equipmentAndCategory = this.props.exercises.filter(exercise => {
+            if (this.state.category === exercise.category && this.state.equipment === exercise.equipment) {
+                return exercise;
+            }
+        });
+
+        let fatiguedAdjusted = equipmentAndCategory.filter(exercise => {
+            if(this.state.difficulty === 0) {
+                if (exercise.difficulty === "Advanced" || exercise.difficulty === "Intermediate") {
+                    return exercise;
+                }
+            } else if (this.state.difficulty === 1) {
+                if (exercise.difficulty === "Intermediate") {
+                    return exercise;
+                }
+            } else {
+                if (exercise.difficulty === "Beginner") {
+                    return exercise;
+                }
+            }
+        });
+
+        let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
+
 
         var check = this.props.exercises
         if (this.state.category !== "" && this.state.fatigue !== ""
             && this.state.equipment !== "") {
               return(this.handleSubmit())
         }
-
         return (
-<<<<<<< HEAD
+
             <div>
                 
                 <form onSubmit={this.handleSubmit}>
@@ -137,37 +154,22 @@ export default class WorkoutCreate extends React.Component {
                                 <option name="category" value="Legs">Legs</option>
                             </select>
                         </label>
-=======
-            <div className="generate-container">
 
-                <form onSubmit={this.handleSubmit}  className="generate-form">
-                       <div className="form-container">
-                        <fieldset className={ this.state.category === "" ? "category" : "slide" } value={this.state.category} onChange={this.handleChangeCategory}>
-                            <legend> What do you want to work out?</legend>
-                        <div className="options">  
-                                <input type="radio" name="category" value="Arms"></input><label>Arms</label>
-                                <input type="radio" name="category" value="Shoulders"></input><label>Shoulders</label>
-                                <input type="radio" name="category" value="Chest"></input><label>Chest</label>
-                                <input type="radio" name="category" value="Back"></input><label>Back</label>
-                                <input type="radio" name="category" value="Legs"></input><label>Legs</label>
-                            </div>
-                        </fieldset>
->>>>>>> afcb88fd6331bf89cc84a461d8f8b778e4802e6b
                     </div>
                         {/* <legend>Great, let's work out our { this.state.category }!</legend> */}
-                    <div className="form-container">
-                    <fieldset className={ this.state.fatigue === "" ? "fatigue" : "slide" } value={this.state.fatigue} onChange={this.handleChangeFatigue}>
+                    <div className="form-container" className={ this.state.fatigue === "" ? "fatigue" : "slide" } value={ this.state.fatigue } onChange={ this.handleChangeFatigue }>
+                    <fieldset >
                             <legend>What's your level of fatigue?</legend>
                         <div className="options">   
                             {/* <input type="radio" name="fatigue" defaultValue=""> */}
-                            <input type="radio" name="fatigue" value="0"></input><label>Full of energy, not tired at all</label>
+                            <input type="radio" name="fatigue" value="0"></input><label>PUMPED!</label>
                             <input type="radio" name="fatigue" value="1"></input><label>Neither</label>
-                            <input type="radio" name="fatigue" value="2"></input><label>Very fatigued, let's take it easy</label>
+                            <input type="radio" name="fatigue" value="2"></input><label>TIRED..</label>
                         </div>
                         </fieldset>
                     </div>
-                    <div className="form-container">
-                    <fieldset className={ this.state.equipment === "" ? "equipment": "slide" }  value={this.state.equipment} onChange={this.handleChangeEquipment}>
+                    <div className="form-container" className={ this.state.equipment === "" ? "equipment" : "slide" } value={ this.state.equipment } onChange={ this.handleChangeEquipment }>
+                    <fieldset >
                             {/* <input type="radio" name="equipment" defaultValue=""> */}
                             <legend>Do you have access to gym equipment?</legend>
                          <div className="options">   
@@ -177,13 +179,7 @@ export default class WorkoutCreate extends React.Component {
                         </fieldset>
                     </div>
                 </form>
-
-
             </div>
-
-           
-         </div>
-
         )
     }
 }
