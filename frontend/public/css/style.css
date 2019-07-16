@@ -198,3 +198,179 @@ font-family: 'Space Mono', monospace;
     padding: 3px 5px;
     margin: -9px 86px;
 }
+
+
+
+/* Workout-Generate-Form  */
+
+
+@media (max-width: 1000px) {
+  .options {
+      position: absolute;
+    top: 12vh;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+  }
+.generate-container{
+    height: 80vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    padding-top: 20vh;
+}
+
+.generate-form{
+    width: 80vh;
+
+}
+.fatigue {
+    width: 70vw;
+    height: 55vh;
+    background: rgb(11, 36, 79);
+    border-radius: 20px;
+    padding: 5vh 5vw;
+    left: 10vw;
+    resize: vertical;
+    position: absolute;
+   
+}
+
+legend{
+    color: white;
+    font-size: 27px;
+    font-family: 'Aldrich', sans-serif;;
+    position: absolute;
+    min-width: 15vw;
+    left: 3vw;
+}
+label {
+    color: white;
+    font-size: 17px;
+    font-family: 'Aldrich', sans-serif;
+    display: block;
+    display: inline;
+}
+input[type="radio"] {
+    margin: 3vh 1vw;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline;
+ }
+ .slide {
+  transform: translateX(2000px);
+  transition: all 0.5s;
+
+}
+.category {
+    width: 70vw;
+    height: 55vh;
+    background: rgb(35, 35, 116);
+    border-radius: 20px;
+    padding: 5vh 5vw;
+    left: 10vw;
+    resize: vertical;
+    position: absolute;
+}
+
+
+.equipment {
+    width: 70vw;
+    height: 55vh;
+    background: rgb(34, 47, 69);
+    border-radius: 20px;
+    padding: 5vh 5vw;
+    left: 10vw;
+    resize: vertical;
+    position: absolute;
+}
+}
+
+@media (min-width: 1001px) {
+    .generate-container{
+        height: 80vh;
+        width: 100vw;
+        background-color: black;
+        position: relative;
+        padding-top: 20vh;
+        margin: auto;
+        background-image: url('../image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg');
+        background-size: cover;
+    }
+
+    .generate-form{
+        height: 60vh;
+        width: 50vw;
+        margin: auto;
+
+    }
+    .form-container{
+        position: relative;
+        margin: auto;
+    }
+  .options{
+    justify-content: space-evenly;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    width: 44vw;
+  }
+    .category {
+        height: 20vh;
+        width: 40vw;
+        background: rgb(35, 35, 116);
+        border-radius: 20px;
+        padding: 5vh 5vw;
+        margin: auto;
+        display: inline;
+        position: absolute;
+    }
+
+    .equipment {
+        height: 20vh;
+        width: 40vw;
+        background: rgb(34, 47, 69);
+        border-radius: 20px;
+        padding: 5vh 5vw;
+        margin: auto;
+        display: inline;
+        position: absolute;
+    }
+    .fatigue {
+        height: 20vh;
+        width: 40vw;
+        background: rgb(11, 36, 79);
+        border-radius: 20px;
+        padding: 5vh 5vw;
+        display: inline;
+        position: absolute;
+    }
+
+legend{
+    color: white;
+    font-size: 27px;
+    font-family: 'Aldrich', sans-serif;;
+    margin: auto;
+    padding-top: 12vh;
+}
+label {
+    color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+}
+input[type="radio"] {
+    /* margin: 2vh 1vw; */
+    width: 1.5em;
+    height: 1.5em;
+    display: inline;
+ }
+ 
+ .slide {
+   transform: translateX(2000px);
+   transition: all 0.5s;
+ 
+ }
+
+
+}
