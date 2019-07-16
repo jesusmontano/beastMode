@@ -47,10 +47,10 @@ class LoginForm extends React.Component {
     // Render the session errors if there are any
     renderErrors() {
         return (
-            <ul>
+            <ul id="error-ul">
                 {Object.keys(this.state.errors).map((error, i) => (
-                    <li key={`error-${i}`}>
-                        {this.state.errors[error]}
+                    <li id= "error-li" key={`error-${i}`}>
+                        <img id="error-img" src={ process.env.PUBLIC_URL + '/image-assets/exclamation-white.png' } />{this.state.errors[error]}
                     </li>
                 ))}
             </ul>
@@ -59,9 +59,9 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="session-form-container" >
                 <form onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className="login-form" style={ { backgroundImage: `url(require('../image-assets/victor-freitas-Ovlel6acNac-unsplash.jpg'))` } }>
                         <input type="text"
                             value={this.state.email}
                             onChange={this.update('email')}
@@ -74,7 +74,7 @@ class LoginForm extends React.Component {
                             placeholder="Password"
                         />
                         <br />
-                        <input type="submit" value="Submit" />
+                        <input id="submit-button" type="submit" value="Submit" />
                         {this.renderErrors()}
                     </div>
                 </form>

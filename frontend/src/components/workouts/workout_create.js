@@ -1,6 +1,12 @@
 import React from 'react';
+
 import WorkoutShow from './workout_show';
 import { BrowserRouter, Route } from 'react-router-dom'
+
+
+import WorkoutBox from './workout_show';
+import {AnimateOnChange} from 'react-animation';
+
 
 export default class WorkoutCreate extends React.Component {
     constructor(props) {
@@ -83,7 +89,6 @@ export default class WorkoutCreate extends React.Component {
     // }
 
     handleChangeCategory(event) {
-        
         this.setState({ category: event.target.value });
     }
 
@@ -116,6 +121,7 @@ export default class WorkoutCreate extends React.Component {
         }
 
         return (
+<<<<<<< HEAD
             <div>
                 
                 <form onSubmit={this.handleSubmit}>
@@ -131,36 +137,53 @@ export default class WorkoutCreate extends React.Component {
                                 <option name="category" value="Legs">Legs</option>
                             </select>
                         </label>
-                    </div>
+=======
+            <div className="generate-container">
 
-                    <div>
-                        Great, let's work out our {this.state.category}!
-                        <label>
-                            What's your level of fatigue?
-                            <select value={this.state.fatigue} onChange={this.handleChangeFatigue}>
-                                {/* <option name="fatigue" defaultValue=""></option> */}
-                                <option name="fatigue" value="0">Full of energy, not fatigued at all</option>
-                                <option name="fatigue" value="1">Neither</option>
-                                <option name="fatigue" value="2">Very fatigued, let's take it easy</option>
-                            </select>
-                        </label>
+                <form onSubmit={this.handleSubmit}  className="generate-form">
+                       <div className="form-container">
+                        <fieldset className={ this.state.category === "" ? "category" : "slide" } value={this.state.category} onChange={this.handleChangeCategory}>
+                            <legend> What do you want to work out?</legend>
+                        <div className="options">  
+                                <input type="radio" name="category" value="Arms"></input><label>Arms</label>
+                                <input type="radio" name="category" value="Shoulders"></input><label>Shoulders</label>
+                                <input type="radio" name="category" value="Chest"></input><label>Chest</label>
+                                <input type="radio" name="category" value="Back"></input><label>Back</label>
+                                <input type="radio" name="category" value="Legs"></input><label>Legs</label>
+                            </div>
+                        </fieldset>
+>>>>>>> afcb88fd6331bf89cc84a461d8f8b778e4802e6b
                     </div>
-
-                    <div>
-                        <label>
-                            Do you have access to gym equipment?
-                            <select value={this.state.equipment} onChange={this.handleChangeEquipment}>
-                                {/* <option name="equipment" defaultValue=""></option> */}
-                                <option name="equipment" value="yes">Yes</option>
-                                <option name="equipment" value="no">No</option>
-                            </select>
-                        </label>
+                        {/* <legend>Great, let's work out our { this.state.category }!</legend> */}
+                    <div className="form-container">
+                    <fieldset className={ this.state.fatigue === "" ? "fatigue" : "slide" } value={this.state.fatigue} onChange={this.handleChangeFatigue}>
+                            <legend>What's your level of fatigue?</legend>
+                        <div className="options">   
+                            {/* <input type="radio" name="fatigue" defaultValue=""> */}
+                            <input type="radio" name="fatigue" value="0"></input><label>Full of energy, not tired at all</label>
+                            <input type="radio" name="fatigue" value="1"></input><label>Neither</label>
+                            <input type="radio" name="fatigue" value="2"></input><label>Very fatigued, let's take it easy</label>
+                        </div>
+                        </fieldset>
+                    </div>
+                    <div className="form-container">
+                    <fieldset className={ this.state.equipment === "" ? "equipment": "slide" }  value={this.state.equipment} onChange={this.handleChangeEquipment}>
+                            {/* <input type="radio" name="equipment" defaultValue=""> */}
+                            <legend>Do you have access to gym equipment?</legend>
+                         <div className="options">   
+                            <input id="equipment" type="radio" name="equipment" value="yes"></input><label id="equipment" >Yes</label>
+                            <input id="equipment" type="radio" name="equipment" value="no"></input><label id="equipment" >No</label>
+                         </div>
+                        </fieldset>
                     </div>
                 </form>
-                <br />
 
-                
+
             </div>
+
+           
+         </div>
+
         )
     }
 }
