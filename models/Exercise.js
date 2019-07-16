@@ -7,9 +7,7 @@ const ExerciseSchema = new Schema({
     required: true
   },
   difficulty: {
-    type: Number,
-    min: 1,
-    max: 10,
+    type: String,
     required: true
   },
   reps: {
@@ -29,14 +27,10 @@ const ExerciseSchema = new Schema({
     required: true
   },
   equipment: {
-    type: String,
+    type: Boolean,
     required: true
   },
-  instructions: {
-    type: String,
-    required: true
-  },
-  video: {
+  image: {
     type: String,
     required: false
   }

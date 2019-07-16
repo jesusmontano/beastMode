@@ -8,6 +8,8 @@ const path = require('path')
 const workouts = require("./routes/api/workouts");
 const User = require('./models/User');
 const bodyParser = require("body-parser");
+import 
+
 
 mongoose
     .connect(db, { useNewUrlParser: true })
@@ -28,6 +30,11 @@ app.get("/", (req, res) => {
     user.save() 
     res.sendFile(path.join(__dirname, 'frontend/public/index.html'));
 });
+
+app.use(bodyParser.json());
+app.get("/", (req, res) => {
+  
+})
 
 app.use("/api/users", users);
 app.use("/api/exercises", exercises);
