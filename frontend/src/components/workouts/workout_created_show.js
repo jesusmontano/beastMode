@@ -71,7 +71,7 @@ class WorkoutCreateShow extends React.Component {
     render(){
 
         if (this.state.rating !== "") {
-            return (this.handleSubmit())
+            return (this.handleSubmit());
         }
 
 
