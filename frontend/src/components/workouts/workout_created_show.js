@@ -24,9 +24,7 @@ const mapDispatchToProps = dispatch => {
 class WorkoutCreateShow extends React.Component {
     constructor(props) {
         super(props);
-        this.props.fetchWorkouts();
-        this.props.fetchAllExercises();
-
+     
         let workoutArr = this.props.workouts.filter(workout => {
             if (workout._id === this.props.workoutId) {
                 return workout;
@@ -43,8 +41,16 @@ class WorkoutCreateShow extends React.Component {
 
     popRating(e) {
         e.preventDefault();
-        const 
+   
     }
+
+    componentDidMount(){
+        this.props.fetchWorkouts();
+        this.props.fetchAllExercises();
+
+    }
+
+
     handleSubmit(e) {
         
         let workoutArr = this.props.workouts.filter(workout => {
@@ -69,7 +75,7 @@ class WorkoutCreateShow extends React.Component {
     render(){
 
         if (this.state.rating !== "") {
-            return (this.handleSubmit())
+            return (this.handleSubmit());
         }
 
 
@@ -82,6 +88,10 @@ class WorkoutCreateShow extends React.Component {
                 return workout;
             }
         });
+
+        if (workoutArr.length === 0) {
+            return null;
+        }
 
         let workoutObj = workoutArr[0];
         let exerciseArr = this.props.exercises.filter(exercise => {

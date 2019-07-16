@@ -22,10 +22,15 @@ export default class WorkoutCreate extends React.Component {
         this.handleChangeFatigue = this.handleChangeFatigue.bind(this);
         this.handleChangeEquipment = this.handleChangeEquipment.bind(this);
 
+       
+    }
+
+    
+
+    componentDidMount(){
         this.props.fetchWorkouts();
         this.props.fetchAllExercises();
     }
-
   
 
     handleSubmit() {
@@ -37,14 +42,23 @@ export default class WorkoutCreate extends React.Component {
             }
         });
 
+        
+        if (equipmentAndCategory.length < 3) {
+            this.props.exercises.filter(exercise => {
+                if ( exercise.body_part === "Abdominals" && exercise.equipment === false ) {
+                    equipmentAndCategory.push(exercise);
+                }
+            });
+        };
 
         let fatiguedAdjusted = equipmentAndCategory.filter(exercise => {
-            if (this.state.difficulty === 0) {
+            // debugger
+            if (this.state.fatigue === "0") {
                 if (exercise.difficulty === "Advanced" || exercise.difficulty === "Intermediate") {
                     return exercise;
                 }
-            } else if (this.state.difficulty === 1) {
-                if (exercise.difficulty === "Intermediate") {
+            } else if (this.state.fatigue === "1") {
+                if (exercise.difficulty === "Intermediate" || exercise.difficulty === "Beginner") {
                     return exercise;
                 }
             } else {
@@ -55,10 +69,11 @@ export default class WorkoutCreate extends React.Component {
         });
 
         
+        
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
-
-    
+        
+        
                 let workout = {
                     category: this.state.category,
                     difficulty: this.state.fatigue,
@@ -71,10 +86,10 @@ export default class WorkoutCreate extends React.Component {
 
             this.props.composeWorkout(workout)
             .then((workout) => {
-                let workoutId = workout.workout.data._id
-                return (this.props.history.push(`/workout_show/${workoutId}`))
+                let workoutId = workout.workout.data._id;
+                this.props.history.push(`/workout_show/${workoutId}`)
             });
-            
+
     }
 
     // componentWillMount() {
@@ -130,12 +145,12 @@ export default class WorkoutCreate extends React.Component {
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
 
-
-        var check = this.props.exercises
         if (this.state.category !== "" && this.state.fatigue !== ""
             && this.state.equipment !== "") {
-              return(this.handleSubmit())
+              (this.handleSubmit());
+              return "";
         }
+
         return (
             <div className="generate-container">
                 

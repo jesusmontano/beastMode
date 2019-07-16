@@ -13,13 +13,13 @@ const ExerciseSchema = new Schema({
   reps: {
     type: Number,
     min: 1,
-    max: 10,
+    max: 12,
     required: true
   },
   sets: {
     type: Number,
     min: 1,
-    max: 5,
+    max: 6,
     required: true
   },
   body_part: {

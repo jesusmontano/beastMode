@@ -10,6 +10,7 @@ import ExerciseContainer from './exercise/exercise_container';
 import WorkoutsContainer from './workouts/workouts_container';
 import WorkoutCreateContainer from './workouts/workout_create_container';
 import WorkoutCreateShow from './workouts/workout_created_show';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => (
     <div>
@@ -22,6 +23,7 @@ const App = () => (
             <Route exact path="/workouts" component={WorkoutsContainer} />
             <Route exact path="/new_workout" component={WorkoutCreateContainer} />
             <Route exact path="/workout_show/:workoutId" component={WorkoutCreateShow} />
+            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
         </Switch>
     </div>
 );

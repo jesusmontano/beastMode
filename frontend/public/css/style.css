@@ -488,3 +488,16 @@ input[type="radio"] {
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
 .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
+
+.profile-page-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.no-user-workouts{
+  font-size: 30px;
+  font-weight: bold;
+}
+
