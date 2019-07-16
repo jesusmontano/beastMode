@@ -1,12 +1,16 @@
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import NavBarContainer from './nav/navbar_container';
 
 import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import ExerciseContainer from './exercise/exercise_container';
+import WorkoutsContainer from './workouts/workouts_container';
+import WorkoutCreateContainer from './workouts/workout_create_container';
+import WorkoutShow from './workouts/workout_show';
+import WorkoutCreateShow from './workouts/workout_created_show';
 
 const App = () => (
     <div>
@@ -16,8 +20,11 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <AuthRoute exact path="/exercises" component={ExerciseContainer} />
+            <Route exact path="/workouts" component={WorkoutsContainer} />
+            <Route exact path="/new_workout" component={WorkoutCreateContainer} />
+            <Route exact path="/workout_show/:workoutId" component={WorkoutCreateShow} />
         </Switch>
     </div>
 );
 
-export default App;
+export default App; 

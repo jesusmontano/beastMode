@@ -4,10 +4,13 @@ import merge from 'lodash/merge';
 
 const ExercisesReducer = (oldState = {}, action) => {
   // debugger
+  let newState = Object.assign({}, oldState);
   Object.freeze(oldState);
+
   switch (action.type) {
     case RECEIVE_ALL_EXERCISES:
-      return action.exercises.data;
+      newState.all = action.exercises.data;
+      return newState;
     case RECEIVE_EXERCISE:
       return merge({}, oldState, { [action.exercise.id]: action.exercise.data });
     default:
