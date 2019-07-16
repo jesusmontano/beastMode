@@ -4,7 +4,6 @@ import { fetchAllExercises } from '../../actions/exercise_actions';
 import Workout from './workouts';
 import React from 'react';
 
-
 const mapStateToProps = (state, ownProps) => {
     const workoutId = ownProps.match.params.workoutId
     debugger
@@ -22,21 +21,16 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-
-
 class WorkoutCreateShow extends React.Component {
     constructor(props) {
         super(props);
-
         this.props.fetchWorkouts();
         this.props.fetchAllExercises();
     }
 
-
-
-
     render(){
 
+      debugger
         if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return <div>Loading..</div>;
         }
@@ -57,7 +51,6 @@ class WorkoutCreateShow extends React.Component {
         });
 
         let workoutObj = workoutArr[0];
-        debugger
         let exerciseArr = this.props.exercises.filter(exercise => {
             if(workoutObj.exercise1_id === exercise._id) {
                 return exercise;

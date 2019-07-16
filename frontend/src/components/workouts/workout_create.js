@@ -16,8 +16,6 @@ export default class WorkoutCreate extends React.Component {
             category: "",
             fatigue: "",
             equipment: "",
-
-  
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,10 +46,7 @@ export default class WorkoutCreate extends React.Component {
                 return (this.props.history.push(`/workout_show/${workoutId}`))
             });
             
-        }
-
-        
-    
+    }
 
     // componentWillMount() {
     //     // this.props.fetchWorkouts();
@@ -71,9 +66,6 @@ export default class WorkoutCreate extends React.Component {
         
         this.setState({ equipment: event.target.value });
     }
-
-
-
 
     render() {
 
@@ -99,8 +91,6 @@ export default class WorkoutCreate extends React.Component {
             }
         });
 
-        
-
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
 
         var check = this.props.exercises
@@ -108,10 +98,8 @@ export default class WorkoutCreate extends React.Component {
             && this.state.equipment !== "") {
               return(this.handleSubmit())
         }
-
         return (
             <div className="generate-container">
-
                 <form onSubmit={this.handleSubmit}  className="generate-form">
                     <div className={ this.state.category === "" ? "form-container category" : "slide" } value={ this.state.category }>
                         <fieldset  >
@@ -147,10 +135,7 @@ export default class WorkoutCreate extends React.Component {
                         </fieldset>
                     </div>
                 </form>
-
-
             </div>
-
         )
     }
 }
