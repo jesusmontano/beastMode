@@ -30,14 +30,14 @@ router.post('/create', (req, res) => {
     // passport.authenticate('jwt', { session: false })
 
     const newWorkout = new Workout({
-        user: req.user.id,
+        // user_id: req.user.id,
         rating: req.body.rating,
         category: req.body.category,
         difficulty: req.body.difficulty,
         equipment: req.body.equipment,
-        exercise1: req.body.exercise1,
-        exercise2: req.body.exercise2,
-        exercise3: req.body.exercise3
+        exercise1_id: req.body.exercise1_id,
+        exercise2_id: req.body.exercise2_id,
+        exercise3_id: req.body.exercise3_id
     });
 
     newWorkout
