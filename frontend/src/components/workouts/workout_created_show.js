@@ -5,7 +5,8 @@ import Workout from './workouts';
 import React from 'react';
 
 const mapStateToProps = (state, ownProps) => {
-    const workoutId = ownProps.match.params.workoutId
+    const workoutId = ownProps.match.params.workoutId;
+
     return {
         workouts: Object.values(state.workouts.all) || [],
         exercises: state.exercises.all || [],
@@ -21,12 +22,9 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-
-
 class WorkoutCreateShow extends React.Component {
     constructor(props) {
         super(props);
-
         this.props.fetchWorkouts();
         this.props.fetchAllExercises();
 
@@ -43,6 +41,7 @@ class WorkoutCreateShow extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChangeRating = this.handleChangeRating.bind(this);
     }
+
 
     handleSubmit(e) {
         
@@ -71,8 +70,9 @@ class WorkoutCreateShow extends React.Component {
             return (this.handleSubmit())
         }
 
+
         if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
-            return null;
+            return <div>Loading..</div>;
         }
 
         let workoutArr = this.props.workouts.filter(workout => {
@@ -82,7 +82,6 @@ class WorkoutCreateShow extends React.Component {
         });
 
         let workoutObj = workoutArr[0];
-
         let exerciseArr = this.props.exercises.filter(exercise => {
             if(workoutObj.exercise1_id === exercise._id) {
                 return exercise;
@@ -94,10 +93,14 @@ class WorkoutCreateShow extends React.Component {
         });
         
         return(
-            <div>
-                <h2>{workoutObj.category}</h2>
+            <div className= "fullscreen-workout">
+                <video autoPlay loop id="background-video">
+                    <source src={ process.env.PUBLIC_URL + '/image-assets/workout-background.mp4' } type="video/mp4"></source>
+                </video>
+                <div id="black"></div>
+            <div className= "workout-container">
 
-                <h3>{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</h3>
+                <div id="workout-equipment">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
                 <br />
 
 
@@ -133,6 +136,7 @@ class WorkoutCreateShow extends React.Component {
                     </label>
                 </form> 
 
+            </div>
             </div>
         )
     }

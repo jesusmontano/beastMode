@@ -1,21 +1,20 @@
 import React from 'react';
 import NavContainer from '../nav/navbar_container';
+import {Link} from 'react-router-dom';
 class MainPage extends React.Component {
-
+    
     render() {
+      debugger
         return (
             <main>
-                {/* <NavContainer /> */}
                 <div id="begin">
-
-                    <button id="btn-generate">Give me a Beast Workout</button>
-                    <br />
-                    <button id="btn-create">Create My Workout</button>
-
+                    <button id="btn-generate"><Link to="/new_workout" className="link-new-workout">Give me a Beast Workout</Link></button>
+                    {/* <br />
+                    <button id="btn-create">Create My Workout</button> */}
                 </div>
-                {/* <footer>
+                <footer>
                     Copyright &copy; 2019 BeastMode
-                </footer> */}
+                </footer>
             </main>
         );
     }

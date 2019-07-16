@@ -9,14 +9,13 @@ import SignupFormContainer from './session/signup_form_container';
 import ExerciseContainer from './exercise/exercise_container';
 import WorkoutsContainer from './workouts/workouts_container';
 import WorkoutCreateContainer from './workouts/workout_create_container';
-import WorkoutShow from './workouts/workout_show';
 import WorkoutCreateShow from './workouts/workout_created_show';
 
 const App = () => (
     <div>
         <NavBarContainer />
         <Switch>
-            <AuthRoute exact path="/" component={MainPage} />
+            <Route exact path="/" component={MainPage} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <AuthRoute exact path="/exercises" component={ExerciseContainer} />
