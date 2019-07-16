@@ -87,6 +87,11 @@ button {
     
     outline: none;
 }
+
+.link-new-workout{
+    text-decoration: none;
+    color: white;
+}
 #btn-generate{
     padding: 0 7vw;
 }
@@ -372,5 +377,58 @@ input[type="radio"] {
  
  }
 
+}
 
+
+.fullscreen-workout{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+}
+
+#black{
+    position: relative;
+    top: -103vh;
+    min-width: 6vw;
+    min-height: 20vh;
+    display: inline-block;
+    z-index: 0;
+    background: black;
+
+}
+#background-video{
+    min-width: 100vw;
+    height: 100vh;
+    display: inline;
+    position:relative;
+}
+.workout-container{
+    width: 20vw;
+    margin: auto;
+    background: black;
+    color: white;
+    position: absolute;
+    top: 29vh;
+    left: 39vw;
+    min-height: 48vh;
+    padding: 1vh 1vw;
+}
+#workout-title{
+    color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    
+    padding: 4px;
+    margin: 4px;
+}
+
+#workout-equipment{
+    
+}
+.workout-container > div {
+color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
 }
