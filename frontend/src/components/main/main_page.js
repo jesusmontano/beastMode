@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 class MainPage extends React.Component {
     
     render() {
-      debugger
         return (
             <main>
                 <div id="begin">
@@ -12,9 +11,9 @@ class MainPage extends React.Component {
                     {/* <br />
                     <button id="btn-create">Create My Workout</button> */}
                 </div>
-                <footer>
+                {/* <footer>
                     Copyright &copy; 2019 BeastMode
-                </footer>
+                </footer> */}
             </main>
         );
     }
