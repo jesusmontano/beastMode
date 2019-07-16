@@ -431,3 +431,13 @@ color: white;
     font-family: 'Aldrich', sans-serif;
     text-align: center;
 }
+
+.profile-page-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.no-user-workouts{
+  font-size: 30px;
+  font-weight: bold;
+}
