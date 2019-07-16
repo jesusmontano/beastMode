@@ -317,7 +317,6 @@ input[type="radio"] {
         display: flex;
         flex-direction: row;
         width: 44vw;
-        margin-top: 4vh;
     }
     .category {
         height: 20vh;
@@ -352,7 +351,7 @@ legend{
     font-size: 27px;
     font-family: 'Aldrich', sans-serif;;
     margin: auto;
-    padding-top: 6vh;
+    padding-top: 12vh;
 }
 label {
     color: white;
@@ -381,7 +380,7 @@ input[type="radio"] {
 
 .fullscreen-workout{
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
     background-color: black;
 
 }
@@ -405,32 +404,92 @@ input[type="radio"] {
 .workout-container{
     width: 20vw;
     margin: auto;
-    background: black;
     color: white;
     position: absolute;
-    top: 29vh;
+    top: 10vh;
     left: 39vw;
     min-height: 48vh;
     padding: 1vh 1vw;
+    text-align: center;
+    animation: myanimation 2s infinite;
+}
+@keyframes myanimation {
+  0% {background-color: red;}
+  25%{background-color:yellow;}
+  50%{background-color:green;}
+  75%{background-color:blue;}
+  100% {background-color: purple;}
 }
 #workout-title{
-    color: white;
-    font-size: 18px;
-    font-family: 'Aldrich', sans-serif;
-    
-    padding: 4px;
-    margin: 4px;
-}
-
-#workout-equipment{
-    
-}
-.workout-container > div {
-color: white;
+    color: black;
     font-size: 18px;
     font-family: 'Aldrich', sans-serif;
     text-align: center;
+    padding: 4px;
+    margin: 10px;
 }
+
+
+.workout-container > div {
+    color: pink;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    display: inline;
+}
+
+.exercise-img{
+    width: 20vw;
+    height: 22vh;
+}
+
+
+
+
+/****** Style Star Rating Widget *****/
+
+.rating-div{
+    
+}
+.rating { 
+  border: none;
+  float: left;
+}
+#rate {
+    font-family: 'Aldrich', sans-serif;
+    margin-top: 2vh;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: 'Aldrich', sans-serif;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
 
 .profile-page-container{
   display: flex;
@@ -441,3 +500,4 @@ color: white;
   font-size: 30px;
   font-weight: bold;
 }
+
