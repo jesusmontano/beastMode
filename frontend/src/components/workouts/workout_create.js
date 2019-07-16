@@ -5,7 +5,6 @@ import { BrowserRouter, Route } from 'react-router-dom'
 
 
 import WorkoutBox from './workout_show';
-import {AnimateOnChange} from 'react-animation';
 
 
 export default class WorkoutCreate extends React.Component {
@@ -138,7 +137,6 @@ export default class WorkoutCreate extends React.Component {
               return(this.handleSubmit())
         }
         return (
-
             <div>
                 
                 <form onSubmit={this.handleSubmit}>
@@ -154,7 +152,6 @@ export default class WorkoutCreate extends React.Component {
                                 <option name="category" value="Legs">Legs</option>
                             </select>
                         </label>
-
                     </div>
                         {/* <legend>Great, let's work out our { this.state.category }!</legend> */}
                     <div className="form-container" className={ this.state.fatigue === "" ? "fatigue" : "slide" } value={ this.state.fatigue } onChange={ this.handleChangeFatigue }>

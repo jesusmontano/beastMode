@@ -5,8 +5,8 @@ import Workout from './workouts';
 import React from 'react';
 
 const mapStateToProps = (state, ownProps) => {
-    const workoutId = ownProps.match.params.workoutId
-    debugger
+    const workoutId = ownProps.match.params.workoutId;
+
     return {
         workouts: Object.values(state.workouts.all) || [],
         exercises: state.exercises.all || [],
@@ -99,21 +99,23 @@ class WorkoutCreateShow extends React.Component {
                 </video>
                 <div id="black"></div>
             <div className= "workout-container">
-                <div id="workout-title">{workoutObj.category}</div>
 
                 <div id="workout-equipment">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
                 <br />
 
 
                 <div>{exerciseArr[0].name}</div>
+                <img src={exerciseArr[0].image} />
                 <div>Do {exerciseArr[0].reps} reps for {exerciseArr[0].sets} sets</div>
                 <br />
 
                 <div>{exerciseArr[1].name}</div>
+                <img src={exerciseArr[1].image} />
                 <div>Do {exerciseArr[1].reps} reps for {exerciseArr[1].sets} sets</div>
                 <br />
 
                 <div>{exerciseArr[2].name}</div>
+                <img src={exerciseArr[2].image} />
                 <div>Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
                 <br />
 
