@@ -8,30 +8,26 @@ class Workout extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            workouts: []
-        }
     }
 
     componentWillMount() {
         this.props.fetchWorkouts();
+        this.props.fetchAllExercises();
     }
 
-    componentWillReceiveProps(newState) {
-        this.setState({ workouts: newState.workouts });
-    }
 
     render() {
+        
 
-
-        if (this.state.workouts.length === 0) {
+        if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return (<div>No workouts yet!</div>)
         } else {
+            // debugger
             return (
                 <div>
                     <h2>All Workouts</h2>
-                    {this.state.workouts.map(workout => (
-                        <WorkoutShow key={workout.id} workout={workout} />
+                    {this.props.workouts.map(workout => (
+                        <WorkoutShow key={workout.id} workout={workout} exercises={this.props.exercises}/>
                     ))}
                 </div>
             );

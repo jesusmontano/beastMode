@@ -9,7 +9,7 @@ const WorkoutSchema = new Schema ({
     },
     rating: {
         type: Number,
-        required: true,
+        required: false,
         default: 5
     },
     category: {
@@ -17,7 +17,7 @@ const WorkoutSchema = new Schema ({
         required: true
     },
     difficulty: {
-        type: Number,
+        type: String,
         required: true
     },
     equipment: {
@@ -39,16 +39,16 @@ const WorkoutSchema = new Schema ({
         ref: 'exercises',
         required: true
     },
-    exercise4_id: {
-        type: Schema.Types.ObjectId,
-        ref: 'exercises',
-        required: false
-    },
-    exercise5_id: {
-        type: Schema.Types.ObjectId,
-        ref: 'exercises',
-        required: false
-    },
+    // exercise4_id: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'exercises',
+    //     required: false
+    // },
+    // exercise5_id: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'exercises',
+    //     required: false
+    // },
 });
 
 const Workout = mongoose.model('workout', WorkoutSchema);

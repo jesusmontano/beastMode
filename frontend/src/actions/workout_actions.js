@@ -14,10 +14,12 @@ export const receiveUserWorkouts = workouts => ({
     workouts
 });
 
-export const receiveNewWorkout = workout => ({
+export const receiveNewWorkout = workout => {
+    // debugger
+    return{
     type: RECEIVE_NEW_WORKOUT,
-    workout
-});
+    workout}
+};
 
 export const fetchWorkouts = () => dispatch => (
     getWorkouts()
@@ -31,8 +33,10 @@ export const fetchUserWorkouts = id => dispatch => (
         .catch(err => console.log(err))
 );
 
-export const composeWorkout = data => dispatch => (
+export const composeWorkout = data => dispatch => {
+ 
+    return (
     createWorkout(data)
         .then(workout => dispatch(receiveNewWorkout(workout)))
-        .catch(err => console.log(err.response.data))
-);
+        .catch(err => console.log(err.response.data)))
+};
