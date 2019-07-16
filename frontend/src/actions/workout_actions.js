@@ -15,7 +15,7 @@ export const receiveUserWorkouts = workouts => ({
 });
 
 export const receiveNewWorkout = workout => {
-    debugger
+    // debugger
     return{
     type: RECEIVE_NEW_WORKOUT,
     workout}
