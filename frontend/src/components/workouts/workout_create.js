@@ -26,15 +26,45 @@ export default class WorkoutCreate extends React.Component {
   
 
     handleSubmit() {
+        // e.preventDefault();
+
+        let equipmentAndCategory = this.props.exercises.filter(exercise => {
+            if (this.state.category === exercise.body_part && String(this.state.equipment) === exercise.equipment) {                
+                return exercise;
+            }
+        });
+
+
+        let fatiguedAdjusted = equipmentAndCategory.filter(exercise => {
+            if (this.state.difficulty === 0) {
+                if (exercise.difficulty === "Advanced" || exercise.difficulty === "Intermediate") {
+                    return exercise;
+                }
+            } else if (this.state.difficulty === 1) {
+                if (exercise.difficulty === "Intermediate") {
+                    return exercise;
+                }
+            } else {
+                if (exercise.difficulty === "Beginner") {
+                    return exercise;
+                }
+            }
+        });
+
         
+
+        let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
+
+    
                 let workout = {
                     category: this.state.category,
                     difficulty: this.state.fatigue,
                     equipment: this.state.equipment,
-                    exercise1_id: "5d2a98851c9d44000092463a",
-                    exercise2_id: "5d2b70db1c9d440000251d53", 
-                    exercise3_id: "5d2cc5c61c9d440000a9c410"
+                    exercise1_id: seletctedExercises[0]._id,
+                    exercise2_id: seletctedExercises[1]._id, 
+                    exercise3_id: seletctedExercises[2]._id
                 };
+
 
             this.props.composeWorkout(workout)
             .then((workout) => {
@@ -63,40 +93,21 @@ export default class WorkoutCreate extends React.Component {
     }
 
     handleChangeEquipment(event) {
+        let val;
+
+        if (event.target.value === "yes") {
+            val = true;
+        } else {
+            val = false;
+        }
         
-        this.setState({ equipment: event.target.value });
+        this.setState({ equipment: val });
     }
 
 
 
 
     render() {
-
-        let equipmentAndCategory = this.props.exercises.filter(exercise => {
-            if (this.state.category === exercise.category && this.state.equipment === exercise.equipment) {
-                return exercise;
-            }
-        });
-
-        let fatiguedAdjusted = equipmentAndCategory.filter(exercise => {
-            if(this.state.difficulty === 0) {
-                if (exercise.difficulty === "Advanced" || exercise.difficulty === "Intermediate") {
-                    return exercise;
-                }
-            } else if (this.state.difficulty === 1) {
-                if (exercise.difficulty === "Intermediate") {
-                    return exercise;
-                }
-            } else {
-                if (exercise.difficulty === "Beginner") {
-                    return exercise;
-                }
-            }
-        });
-
-        
-
-        let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
 
         var check = this.props.exercises
         if (this.state.category !== "" && this.state.fatigue !== ""
@@ -114,7 +125,7 @@ export default class WorkoutCreate extends React.Component {
                             <select value={this.state.category} onChange={this.handleChangeCategory}>
                                 {/* <option name="category" defaultValue=""></option> */}
                                 <option name="category" value="Arms">Arms</option>
-                                <option name="category" value="Shoulders">Shoulders</option>
+                                <option name="category" value="Abdominals">Abdominals</option>
                                 <option name="category" value="Chest">Chest</option>
                                 <option name="category" value="Back">Back</option>
                                 <option name="category" value="Legs">Legs</option>

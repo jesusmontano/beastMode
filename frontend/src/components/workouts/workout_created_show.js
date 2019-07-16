@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchWorkouts } from '../../actions/workout_actions';
+import { fetchWorkouts, updateWorkout } from '../../actions/workout_actions';
 import { fetchAllExercises } from '../../actions/exercise_actions';
 import Workout from './workouts';
 import React from 'react';
@@ -16,7 +16,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchWorkouts: () => dispatch(fetchWorkouts()),
-        fetchAllExercises: () => dispatch(fetchAllExercises())
+        fetchAllExercises: () => dispatch(fetchAllExercises()),
+        updateWorkout: data => dispatch(updateWorkout(data))
     };
 };
 
@@ -28,25 +29,51 @@ class WorkoutCreateShow extends React.Component {
 
         this.props.fetchWorkouts();
         this.props.fetchAllExercises();
+
+        let workoutArr = this.props.workouts.filter(workout => {
+            if (workout._id === this.props.workoutId) {
+                return workout;
+            }
+        });
+
+        this.state = {
+            rating: ""
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChangeRating = this.handleChangeRating.bind(this);
     }
 
+    handleSubmit(e) {
+        
+        let workoutArr = this.props.workouts.filter(workout => {
+            if (workout._id === this.props.workoutId) {
+                return workout;
+            }
+        });
 
+        let workoutObj = workoutArr[0];
+        workoutObj.rating = this.state.rating;
 
+        this.props.updateWorkout(workoutObj)
+            .then((workout) => {
+                return (this.props.history.push('/exercises'))
+            });
+    }
+
+    handleChangeRating(event) {
+        this.setState({ rating: event.target.value });
+    }
 
     render(){
+
+        if (this.state.rating !== "") {
+            return (this.handleSubmit())
+        }
 
         if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return null;
         }
-        
-        // let workoutObj;
-
-        // for (let i = 0; i < this.props.workouts.length; i++ ) {
-        //     if(this.props.workouts[i]._id === this.props.workoutId) {
-        //         workoutObj = this.props.workouts[i];
-        //         return;
-        //     }
-        // }
 
         let workoutArr = this.props.workouts.filter(workout => {
             if (workout._id === this.props.workoutId) {
@@ -65,9 +92,6 @@ class WorkoutCreateShow extends React.Component {
                 return exercise;
             } 
         });
-       
-        // debugger
-
         
         return(
             <div>
@@ -88,6 +112,24 @@ class WorkoutCreateShow extends React.Component {
                 <div>{exerciseArr[2].name}</div>
                 <div>Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
                 <br />
+
+                {/* <button onClick={() => this.props.openModal()}>Finish Workout!</button>   */}
+                
+                <button>Finish Workout!</button>
+
+                <form onSubmit={this.handleSubmit}>
+                    <div>Rate and Save Your Workout!</div>
+                    <label>
+                        <select onChange={this.handleChangeRating}>
+                            <option name="rating" value="1">1</option>
+                            <option name="rating" value="2">2</option>
+                            <option name="rating" value="3">3</option>
+                            <option name="rating" value="4">4</option>
+                            <option name="rating" value="5">I feel like a beast!</option>
+                        </select>
+                    </label>
+                </form> 
+
             </div>
         )
     }

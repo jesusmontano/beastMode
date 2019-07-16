@@ -7,9 +7,7 @@ const ExerciseSchema = new Schema({
     required: true
   },
   difficulty: {
-    type: Number,
-    min: 1,
-    max: 10,
+    type: String,
     required: true
   },
   reps: {
