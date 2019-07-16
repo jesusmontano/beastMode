@@ -7,6 +7,7 @@ import React from 'react';
 
 const mapStateToProps = (state, ownProps) => {
     const workoutId = ownProps.match.params.workoutId
+    debugger
     return {
         workouts: Object.values(state.workouts.all) || [],
         exercises: state.exercises.all || [],
@@ -37,7 +38,7 @@ class WorkoutCreateShow extends React.Component {
     render(){
 
         if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
-            return null;
+            return <div>Loading..</div>;
         }
         
         // let workoutObj;
@@ -56,7 +57,7 @@ class WorkoutCreateShow extends React.Component {
         });
 
         let workoutObj = workoutArr[0];
-
+        debugger
         let exerciseArr = this.props.exercises.filter(exercise => {
             if(workoutObj.exercise1_id === exercise._id) {
                 return exercise;
@@ -67,7 +68,7 @@ class WorkoutCreateShow extends React.Component {
             } 
         });
        
-        // debugger
+        
 
         
         return(
