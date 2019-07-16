@@ -4,13 +4,13 @@ import WorkoutBox from '../workouts/workout_show';
 export default class Profile extends React.Component {
     constructor(props) {
         super(props);
-
         this.state = {
             workouts: []
         }
     }
 
     componentWillMount() {
+      debugger
         console.log(this.props.currentUser.id)
         this.props.fetchUserWorkouts(this.props.currentUser.id);
     }
@@ -20,8 +20,15 @@ export default class Profile extends React.Component {
     }
 
     render() {
+      debugger
         if (this.state.workouts.length === 0) {
-            return (<div>You haven't created any worksouts yet</div>)
+            return (
+              <div className="profile-no-user-container">
+                <div className="no-user-workouts">
+                  You haven't created any worksouts yet!
+                </div>
+              </div>
+            )
         } else {
             return (
                 <div>
