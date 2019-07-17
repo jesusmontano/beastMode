@@ -2,7 +2,7 @@ main {
     width: 100vw;
     height: 100vh;
     margin: auto;
-    background-image: url("../image-assets/splash.jpg");
+    background-image: url("/image-assets/splash.jpg");
     background-size: 213vw;
     position: relative;
     
@@ -132,7 +132,7 @@ font-family: 'Space Mono', monospace;
 }
 
 .session-form {
-    background-image: url("../image-assets/jesper-aggergaard-oc7tGf44rM0-unsplash.jpg");
+    background-image: url("/image-assets/jesper-aggergaard-oc7tGf44rM0-unsplash.jpg");
     background-size: 213vw;
     width: 100vw;
     height: 50vh;
@@ -185,7 +185,7 @@ font-family: 'Space Mono', monospace;
 }
 
 .login-form{
-    background-image: url('../image-assets/victor-freitas-Ovlel6acNac-unsplash.jpg');
+    background-image: url('/image-assets/victor-freitas-Ovlel6acNac-unsplash.jpg');
     background-size: 213vw;
     width: 100vw;
     height: 50vh;
@@ -298,7 +298,7 @@ input[type="radio"] {
         position: relative;
         padding-top: 20vh;
         margin: auto;
-        background-image: url('../image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg');
+        background-image: url('/image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg');
         background-size: cover;
     }
 
@@ -533,6 +533,10 @@ input[type="radio"] {
   text-align: center;
 }
 
+.loginToRate {
+    margin-top: 3vh;
+}
+
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .rating > input:checked ~ label, /* show gold star when clicked */
@@ -556,7 +560,7 @@ input[type="radio"] {
     width: 100vw;
     height: 100vh;
     background: black;
-    background-image: url("../image-assets/barbell.jpg");
+    background-image: url("/image-assets/barbell.jpg");
 }
 .no-user-workouts{
   font-size: 30px;

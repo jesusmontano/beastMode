@@ -180,6 +180,7 @@ class WorkoutCreateShow extends React.Component {
 
                         </fieldset>
                     </form>
+                            <div className={ this.props.userId ? "none" : "loginToRate"}>Login to save this workout.</div>
                 </div>
                 </div> 
             </div>
