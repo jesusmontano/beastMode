@@ -14,8 +14,9 @@ router.get('/', (req, res) => {
 });
 
 // Get all workouts by user 
-router.get('user/:user_id', (req, res) => {
-    Workout.findByUser({ user: req.params.user_id })
+router.get('/user/:user_id', (req, res) => {
+    
+    Workout.find({ user_id: req.params.user_id })
         .then(workouts => res.json(workouts))
         .catch(err =>
             res.status(404).json({ noworkoutsfound: 'No workouts found from that user' }));
@@ -35,7 +36,7 @@ router.post('/create', (req, res) => {
     // passport.authenticate('jwt', { session: false })
 
     const newWorkout = new Workout({
-        // user_id: req.user.id,
+        user_id: req.body.user_id,
         rating: req.body.rating,
         category: req.body.category,
         difficulty: req.body.difficulty,
@@ -54,6 +55,7 @@ router.patch('/:id', (req, res) => {
     Workout.findById(req.params.id)
         .then(workout => {
         workout.rating = req.body.rating;
+        workout.user_id = req.body.user_id;
             workout.save().then(workout => res.json(workout)).catch(err => res.status(404).json(err));
     });
 });

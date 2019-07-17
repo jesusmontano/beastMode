@@ -27,7 +27,7 @@ class Workout extends React.Component {
                 <div>
                     <h2>All Workouts</h2>
                     {this.props.workouts.map(workout => (
-                        <WorkoutShow key={workout.id} workout={workout} exercises={this.props.exercises}/>
+                        <WorkoutShow/>
                     ))}
                 </div>
             );
