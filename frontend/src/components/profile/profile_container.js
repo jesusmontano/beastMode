@@ -15,7 +15,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchUserWorkouts: id => dispatch(fetchUserWorkouts(id)),
-        fetchAllExercises: () => dispatch(fetchAllExercises())
+        fetchAllExercises: () => dispatch(fetchAllExercises()),
     };
 };
 

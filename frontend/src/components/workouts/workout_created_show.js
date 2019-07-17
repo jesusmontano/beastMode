@@ -155,21 +155,22 @@ class WorkoutCreateShow extends React.Component {
                 <div className="rating-container">
                         <form className={this.state.clicked ? "rating-div" : "none"}>
                         <div id="rate">Rate and Save Your Workout!</div>
-                            <fieldset class="rating" onChange={ this.handleChangeRating } onSubmit={ this.handleSubmit }>
+                            <fieldset className="rating" onChange={ this.handleChangeRating } onSubmit={ this.handleSubmit }>
+                                <label className="full" for="star5" title="I feel like a beast!"></label>
                                 <input type="radio" id="star5" name="rating" value="5" />
-                                    <label class="full" for="star5" title="I feel like a beast!"></label>
-
+                                    
+                    <label className="full" for="star4" title="Pretty good - 4 stars"></label>
                                 <input type="radio" id="star4" name="rating" value="4" />
-                                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
-
+                                    
+                    <label className="full" for="star3" title="Meh - 3 stars"></label>
                                 <input type="radio" id="star3" name="rating" value="3" />
-                                    <label class="full" for="star3" title="Meh - 3 stars"></label>
-
+                                    
+                    <label className="full" for="star2" title="Kinda bad - 2 stars"></label>
                                 <input type="radio" id="star2" name="rating" value="2" />
-                                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
-
+                                    
+                    <label className="full" for="star1" title="Sucks big time - 1 star"></label>
                                 <input type="radio" id="star1" name="rating" value="1" />
-                                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                    
 
                         </fieldset>
                     </form>

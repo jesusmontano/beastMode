@@ -18,10 +18,12 @@ class NavBar extends React.Component {
         if (this.props.loggedIn) {
             return (
                 <div className="session-links">
-                    {/* <Link to={'/tweets'}>All Tweets</Link> */}
+                  
                     <Link className="nav-links" to={'/profile'}>Profile</Link>
-                    {/* <Link to={'/new_tweet'}>Write a Tweet</Link> */}
-                    <button className="nav-links" onClick={this.logoutUser}>Logout</button>
+                  
+                    <button className="nav-links" onClick={this.logoutUser}>
+                      
+                      Logout</button>
                 </div>
             );
         } else {
