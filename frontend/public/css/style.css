@@ -400,36 +400,36 @@ input[type="radio"] {
     width: 100vw;
     height: 130vh;
     background-color: black;
-
+    position:relative
 }
 
-#black{
-    position: relative;
-    top: -103vh;
-    min-width: 6vw;
-    min-height: 20vh;
-    display: inline-block;
-    z-index: 0;
-    background: black;
 
-}
 #background-video{
     min-width: 100vw;
     height: 100vh;
-    display: inline;
-    position:relative;
+    /* display: inline; */
+    /* position:relative; */
+}
+
+.banana{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
 }
 .workout-container{
-    width: 20vw;
-    margin: auto;
+    width: 30vw;
     color: white;
-    position: absolute;
-    top: 10vh;
-    left: 39vw;
+    /* position: absolute; */
+    top: 0;
+    /* left: 39vw; */
     min-height: 48vh;
     padding: 1vh 1vw;
     text-align: center;
     background-color: rgba(6, 5, 5, 0.776);
+    position: relative;
+    margin: auto;
+
     
 }
 @keyframes myanimation {
@@ -475,6 +475,8 @@ input[type="radio"] {
     padding: 16px;
     top: 46vh;
     z-index: 5;
+    left: 6vw;
+    
 }
 
 #overlay {
@@ -503,20 +505,25 @@ input[type="radio"] {
 } */
 .rating { 
   border: none;
-  margin-right: 3vw;
+  margin-right: 5vw;
+  margin-top: 3vh;
+  text-align: center;
 }
 #rate {
     font-family: 'Aldrich', sans-serif;
     margin-top: 2vh;
+     text-align: center;
+     font-size: 1.6em;
 }
 
 .rating > input { display: none; } 
 .rating > label:before { 
   margin: 6px;
-  font-size: 1.6em;
+  font-size: 2em;
   font-family: 'Aldrich', sans-serif;
   display: inline-block;
   content: "★";
+  text-align: center;
   
 }
 
@@ -524,6 +531,7 @@ input[type="radio"] {
 .rating > label { 
   color: #ddd; 
  float: right; 
+  text-align: center;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
