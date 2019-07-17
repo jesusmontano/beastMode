@@ -619,6 +619,7 @@ input[type="radio"] {
 
 .workout-show-exercise-name{
   font-size: 17px;
+  min-height: 4vh;
 }
 
 .workout-show-image{

@@ -24,7 +24,7 @@ const App = () => (
             <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <Route exact path="/new_workout" component={WorkoutCreateContainer} />
             <Route exact path="/workout_show/:workoutId" component={WorkoutCreateShow} />
-            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
+            <ProtectedRoute exact path="/profile/:userId" component={ProfileContainer} />
         </Switch>
     </div>
 );

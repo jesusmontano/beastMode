@@ -7,13 +7,12 @@ var mongoose = require('mongoose');
 
 const mapStateToProps = (state, ownProps) => {
     const workoutId = ownProps.match.params.workoutId;
-    const userId = state.session.user.id;
 
     return {
         workouts: Object.values(state.workouts.all) || [],
         exercises: state.exercises.all || [],
         workoutId: workoutId,
-        userId: userId || null
+        userId: state.session.user.id || null
     };
 };
 
@@ -78,7 +77,7 @@ class WorkoutCreateShow extends React.Component {
 
         this.props.updateWorkout(workoutObj)
             .then((workout) => {
-                return (this.props.history.push('/profile'))
+                return ( this.props.history.push(`/profile/${this.props.userId}`))
             });
     }
 
