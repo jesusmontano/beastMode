@@ -2,12 +2,10 @@ import React from 'react';
 
 class WorkoutShow extends React.Component {
     render() {
-        let exerciseArr = [];
-        this.props.exercises.forEach( exercise => {
-            if ( exercise._id === this.props.workout.exercise1_id || exercise._id === this.props.workout.exercise2_id || exercise._id === this.props.workout.exercise3_id ) {
-                exerciseArr.push( exercise );
-            }
-        } );
+        let exerciseArr = this.props.exercises.filter(exercise => {
+            if (exercise._id === this.props.workout.exercise1_id || exercise._id === this.props.workout.exercise2_id || exercise._id === this.props.workout.exercise3_id){
+                return exercise;
+            } });
         return (
 
             <div className="workout-show-container">
