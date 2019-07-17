@@ -138,6 +138,7 @@ class WorkoutCreateShow extends React.Component {
                 <div>{ exerciseArr[0].name } : 
                 <br />
                 Do { exerciseArr[0].reps } reps for { exerciseArr[0].sets } sets</div>
+                <br />
                 <img className="exercise-img" src={exerciseArr[0].image} />
 
                 <br />
@@ -145,14 +146,16 @@ class WorkoutCreateShow extends React.Component {
                 <div>{ exerciseArr[1].name } : 
                 <br />
                 Do { exerciseArr[1].reps } reps for { exerciseArr[1].sets } sets</div>
+                <br />
                 <img className="exercise-img" src={exerciseArr[1].image} />
                 <br />
 
                 <div>{ exerciseArr[2].name } : 
                 <br />
                 Do { exerciseArr[2].reps } reps for { exerciseArr[2].sets } sets</div>
+                        <br />
                 <img className="exercise-img" src={exerciseArr[2].image} />
-
+                <br />
                 <br />
                 <button onClick={this.popRating}>Finish Workout!</button>
                    

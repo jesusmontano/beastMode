@@ -1,5 +1,4 @@
 import React from 'react';
-import NavContainer from '../nav/navbar_container';
 import {Link} from 'react-router-dom';
 class MainPage extends React.Component {
     render() {
