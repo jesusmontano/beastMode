@@ -126,31 +126,36 @@ class WorkoutCreateShow extends React.Component {
             <div className= "fullscreen-workout">
                 <div id="overlay"></div>
                 <video autoPlay loop id="background-video">
-                    <source src={ process.env.PUBLIC_URL + '/image-assets/workout-background.mp4' } type="video/mp4"></source>
+                    <source src={ process.env.PUBLIC_URL + '/image-assets/beast-background.mp4' } type="video/mp4"></source>
                 </video>
-                <div id="black"></div>
-
+            <div className="banana">
                 <div className= "workout-container">
 
                 <div id="workout-title">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
                 <br />
 
 
-                <div>{ exerciseArr[0].name } : Do { exerciseArr[0].reps } reps for { exerciseArr[0].sets } sets</div>
+                <div>{ exerciseArr[0].name } : 
+                <br />
+                Do { exerciseArr[0].reps } reps for { exerciseArr[0].sets } sets</div>
                 <img className="exercise-img" src={exerciseArr[0].image} />
 
                 <br />
 
-                <div>{ exerciseArr[1].name } : Do { exerciseArr[1].reps } reps for { exerciseArr[1].sets } sets</div>
+                <div>{ exerciseArr[1].name } : 
+                <br />
+                Do { exerciseArr[1].reps } reps for { exerciseArr[1].sets } sets</div>
                 <img className="exercise-img" src={exerciseArr[1].image} />
                 <br />
 
-                <div>{ exerciseArr[2].name } : Do { exerciseArr[2].reps } reps for { exerciseArr[2].sets } sets</div>
+                <div>{ exerciseArr[2].name } : 
+                <br />
+                Do { exerciseArr[2].reps } reps for { exerciseArr[2].sets } sets</div>
                 <img className="exercise-img" src={exerciseArr[2].image} />
 
                 <br />
-
                 <button onClick={this.popRating}>Finish Workout!</button>
+                   
 
                 <div className="rating-container">
                         <form className={this.state.clicked ? "rating-div" : "none"}>
@@ -175,6 +180,7 @@ class WorkoutCreateShow extends React.Component {
                         </fieldset>
                     </form>
                 </div>
+                </div> 
             </div>
             </div>
         )

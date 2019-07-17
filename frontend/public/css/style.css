@@ -312,6 +312,12 @@ input[type="radio"] {
     .form-container{
         position: relative;
         margin: auto;
+         -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+          -webkit-transform: rotateY(0);
+          transform: rotateY(0);
     }
     .options{
         justify-content: space-evenly;
@@ -333,7 +339,7 @@ input[type="radio"] {
     .equipment {
         height: 20vh;
         width: 40vw;
-        background: rgb(34, 47, 69);
+        background:  rgb(34, 47, 69);
         padding: 5vh 5vw;
         margin: auto;
         display: inline;
@@ -368,52 +374,64 @@ input[type="radio"] {
  }
  
  .slide {
-   transform: scaleX(-1) translate(-2000px) ;
-   transition-duration: 3s;
-   /* perspective: 1000px; */
- 
+    /* transition: transform 0.7s ease-in-out; */
+    /* animation: myanime 3s; */
+    /* background: rgba(35, 35, 74, 0.913); */
+    /* transform: translateX(4480px) rotateY(-90deg); */
+    transition: 1s ease-out;
+    display: none;
  }
+/* 
+ @keyframes myanime {
+    50% {;}
+   90%{transform:rotateY(90deg);} 
+   100%{color: transparent;}
+ } */
  fieldset {
      margin-left: -2vw;
  }
 
+
+ 
 }
+
+
 
 
 .fullscreen-workout{
     width: 100vw;
     height: 130vh;
     background-color: black;
-
+    position:relative
 }
 
-#black{
-    position: relative;
-    top: -103vh;
-    min-width: 6vw;
-    min-height: 20vh;
-    display: inline-block;
-    z-index: 0;
-    background: black;
 
-}
 #background-video{
     min-width: 100vw;
     height: 100vh;
-    display: inline;
-    position:relative;
+    /* display: inline; */
+    /* position:relative; */
+}
+
+.banana{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
 }
 .workout-container{
-    width: 20vw;
-    margin: auto;
+    width: 30vw;
     color: white;
-    position: absolute;
-    top: 10vh;
-    left: 39vw;
+    /* position: absolute; */
+    top: 0;
+    /* left: 39vw; */
     min-height: 48vh;
     padding: 1vh 1vw;
     text-align: center;
     background-color: rgba(6, 5, 5, 0.776);
+    position: relative;
+    margin: auto;
+
     
 }
 @keyframes myanimation {
@@ -459,6 +477,8 @@ input[type="radio"] {
     padding: 16px;
     top: 46vh;
     z-index: 5;
+    left: 6vw;
+    
 }
 
 #overlay {
@@ -487,20 +507,25 @@ input[type="radio"] {
 } */
 .rating { 
   border: none;
-  margin-right: 3vw;
+  margin-right: 5vw;
+  margin-top: 3vh;
+  text-align: center;
 }
 #rate {
     font-family: 'Aldrich', sans-serif;
     margin-top: 2vh;
+     text-align: center;
+     font-size: 1.6em;
 }
 
 .rating > input { display: none; } 
 .rating > label:before { 
   margin: 6px;
-  font-size: 1.6em;
+  font-size: 2em;
   font-family: 'Aldrich', sans-serif;
   display: inline-block;
   content: "★";
+  text-align: center;
   
 }
 
@@ -508,6 +533,7 @@ input[type="radio"] {
 .rating > label { 
   color: #ddd; 
  float: right; 
+  text-align: center;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
