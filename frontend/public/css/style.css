@@ -310,6 +310,12 @@ input[type="radio"] {
     .form-container{
         position: relative;
         margin: auto;
+         -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+          -webkit-transform: rotateY(0);
+          transform: rotateY(0);
     }
     .options{
         justify-content: space-evenly;
@@ -331,7 +337,7 @@ input[type="radio"] {
     .equipment {
         height: 20vh;
         width: 40vw;
-        background: rgb(34, 47, 69);
+        background:  rgb(34, 47, 69);
         padding: 5vh 5vw;
         margin: auto;
         display: inline;
@@ -366,16 +372,28 @@ input[type="radio"] {
  }
  
  .slide {
-   transform: scaleX(-1) translate(-2000px) ;
-   transition-duration: 3s;
-   /* perspective: 1000px; */
- 
+    /* transition: transform 0.7s ease-in-out; */
+    /* animation: myanime 3s; */
+    /* background: rgba(35, 35, 74, 0.913); */
+    /* transform: translateX(4480px) rotateY(-90deg); */
+    transition: 1s ease-out;
+    display: none;
  }
+/* 
+ @keyframes myanime {
+    50% {;}
+   90%{transform:rotateY(90deg);} 
+   100%{color: transparent;}
+ } */
  fieldset {
      margin-left: -2vw;
  }
 
+
+ 
 }
+
+
 
 
 .fullscreen-workout{
