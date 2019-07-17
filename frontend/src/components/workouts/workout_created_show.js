@@ -78,7 +78,7 @@ class WorkoutCreateShow extends React.Component {
 
         this.props.updateWorkout(workoutObj)
             .then((workout) => {
-                return (this.props.history.push('/exercises'))
+                return (this.props.history.push('/profile'))
             });
     }
 
