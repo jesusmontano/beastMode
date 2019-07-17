@@ -22,27 +22,27 @@ export default class WorkoutCreate extends React.Component {
         this.handleChangeFatigue = this.handleChangeFatigue.bind(this);
         this.handleChangeEquipment = this.handleChangeEquipment.bind(this);
 
-       
+
     }
 
-    
+
 
     componentDidMount(){
         this.props.fetchWorkouts();
         this.props.fetchAllExercises();
     }
-  
+
 
     handleSubmit() {
         // e.preventDefault();
 
         let equipmentAndCategory = this.props.exercises.filter(exercise => {
-            if (this.state.category === exercise.body_part && this.state.equipment === exercise.equipment) {                
+            if (this.state.category === exercise.body_part && this.state.equipment === exercise.equipment) {
                 return exercise;
             }
         });
 
-        
+
         if (equipmentAndCategory.length < 3) {
             this.props.exercises.filter(exercise => {
                 if ( exercise.body_part === "Abdominals" && exercise.equipment === false ) {
@@ -68,18 +68,18 @@ export default class WorkoutCreate extends React.Component {
             }
         });
 
-        
-        
+
+
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
-        
-        
+
+
                 let workout = {
                     category: this.state.category,
                     difficulty: this.state.fatigue,
                     equipment: this.state.equipment,
                     exercise1_id: seletctedExercises[0]._id,
-                    exercise2_id: seletctedExercises[1]._id, 
+                    exercise2_id: seletctedExercises[1]._id,
                     exercise3_id: seletctedExercises[2]._id
                 };
 
@@ -102,7 +102,7 @@ export default class WorkoutCreate extends React.Component {
     }
 
     handleChangeFatigue(event) {
-        
+
         this.setState({ fatigue: event.target.value });
     }
 
@@ -114,7 +114,7 @@ export default class WorkoutCreate extends React.Component {
         } else {
             val = false;
         }
-        
+
         this.setState({ equipment: val });
     }
 
@@ -153,9 +153,9 @@ export default class WorkoutCreate extends React.Component {
 
         return (
             <div className="generate-container">
-                
-               
-                    
+
+
+
                     <form onSubmit={ this.handleSubmit } className="generate-form">
                             <fieldset className={ this.state.category === "" ? "category form-container" : "slide" } value={ this.state.category } onChange={ this.handleChangeCategory }>
                                     <legend> What do you want to work out?</legend>
@@ -167,29 +167,29 @@ export default class WorkoutCreate extends React.Component {
                                         <input type="radio" name="category" value="Legs"></input><label>Legs</label>
                                     </div>
                             </fieldset>
-                     
-                        
+
+
 
                         <fieldset className={ this.state.fatigue === "" ? "fatigue form-container" : "slide" } value={ this.state.fatigue } onChange={ this.handleChangeFatigue }>
                             <legend>What's your level of fatigue?</legend>
-                            <div className="options">   
-                                
+                            <div className="options">
+
                                 <input type="radio" name="fatigue" value="0"></input><label>PUMPED!</label>
                                 <input type="radio" name="fatigue" value="1"></input><label>Neither</label>
                                 <input type="radio" name="fatigue" value="2"></input><label>TIRED..</label>
                             </div>
                         </fieldset>
-              
-                   
+
+
                         <fieldset className={ this.state.equipment === "" ? "equipment form-container" : "slide" } value={ this.state.equipment } onChange={ this.handleChangeEquipment } >
-                         
+
                             <legend>Do you have access to gym equipment?</legend>
-                         <div className="options">   
+                         <div className="options">
                             <input id="equipment" type="radio" name="equipment" value="yes"></input><label id="equipment" >Yes</label>
                             <input id="equipment" type="radio" name="equipment" value="no"></input><label id="equipment" >No</label>
                          </div>
                         </fieldset>
-                
+
                 </form>
             </div>
         )
