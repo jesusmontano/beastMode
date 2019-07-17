@@ -411,7 +411,8 @@ input[type="radio"] {
     min-height: 48vh;
     padding: 1vh 1vw;
     text-align: center;
-    animation: myanimation 2s infinite;
+    background-color: rgba(6, 5, 5, 0.776);
+    
 }
 @keyframes myanimation {
   0% {background-color: red;}
@@ -421,18 +422,20 @@ input[type="radio"] {
   100% {background-color: purple;}
 }
 #workout-title{
-    color: black;
+    color: white;
     font-size: 18px;
     font-family: 'Aldrich', sans-serif;
     text-align: center;
     padding: 4px;
     margin: 10px;
+    position: relative;
+    top: -6vh;
 }
 
 
 .workout-container > div {
-    color: pink;
-    font-size: 18px;
+    color: white;
+    font-size: 16px;
     font-family: 'Aldrich', sans-serif;
     display: inline;
 }
@@ -440,6 +443,7 @@ input[type="radio"] {
 .exercise-img{
     width: 20vw;
     height: 22vh;
+    margin: 13px;
 }
 
 

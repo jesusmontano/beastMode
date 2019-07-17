@@ -36,10 +36,9 @@ class WorkoutCreateShow extends React.Component {
         });
 
         this.state = {
-            rating: "",
-            user_id: this.props.userId,
-          clicked: false
-
+            rating: "", 
+            clicked: false,
+            user_id: this.props.userId
         };
     
 
@@ -79,7 +78,7 @@ class WorkoutCreateShow extends React.Component {
 
         this.props.updateWorkout(workoutObj)
             .then((workout) => {
-                return (this.props.history.push('/exercises'))
+                return (this.props.history.push('/profile'))
             });
     }
 
@@ -91,16 +90,12 @@ class WorkoutCreateShow extends React.Component {
     document.getElementById( "overlay" ).style.display = "block";
     }
 
-    
-
     render(){
 
         if (this.state.rating !== "") {
             this.handleSubmit();
             return ""
-
         }
-
 
         if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return <div>Loading..</div>;
@@ -154,8 +149,6 @@ class WorkoutCreateShow extends React.Component {
                 <img className="exercise-img" src={exerciseArr[2].image} />
 
                 <br />
-
-                {/* <button onClick={() => this.props.openModal()}>Finish Workout!</button>   */}
 
                 <button onClick={this.popRating}>Finish Workout!</button>
 
