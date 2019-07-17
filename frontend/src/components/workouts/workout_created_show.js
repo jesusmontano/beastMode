@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
         workouts: Object.values(state.workouts.all) || [],
         exercises: state.exercises.all || [],
         workoutId: workoutId,
-        userId: state.session.user.id || null
+        userId: state.session.user ? state.session.user.id : null
     };
 };
 
@@ -37,7 +37,7 @@ class WorkoutCreateShow extends React.Component {
         this.state = {
             rating: "", 
             clicked: false,
-            user_id: this.props.userId
+            // user_id: this.props.userId
         };
     
 
@@ -71,9 +71,9 @@ class WorkoutCreateShow extends React.Component {
         let workoutObj = workoutArr[0];
         workoutObj.rating = this.state.rating;
         
-        if (this.state.user_id !== null) {
-            workoutObj.user_id = this.state.user_id;
-        }
+        if (this.props.userId !== null) {
+            workoutObj.user_id = this.props.userId;
+        } 
 
         this.props.updateWorkout(workoutObj)
             .then((workout) => {
@@ -88,6 +88,8 @@ class WorkoutCreateShow extends React.Component {
     on() {
     document.getElementById( "overlay" ).style.display = "block";
     }
+
+    // componentWillUnmount(prevProps)
 
     render(){
 
@@ -109,6 +111,7 @@ class WorkoutCreateShow extends React.Component {
         if (workoutArr.length === 0) {
             return null;
         }
+
 
         let workoutObj = workoutArr[0];
         let exerciseArr = this.props.exercises.filter(exercise => {
