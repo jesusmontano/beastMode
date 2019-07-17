@@ -3,6 +3,7 @@ import NavContainer from '../nav/navbar_container';
 import {Link} from 'react-router-dom';
 class MainPage extends React.Component {
     render() {
+
         return (
             <main>
                 <div id="begin">
