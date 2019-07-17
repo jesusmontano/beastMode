@@ -3,6 +3,7 @@ import { fetchUserWorkouts } from '../../actions/workout_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state) => {
+  debugger
     return {
         workouts: Object.values(state.workouts.user),
         currentUser: state.session.user

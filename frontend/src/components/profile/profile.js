@@ -16,6 +16,7 @@ export default class Profile extends React.Component {
     }
 
     componentWillReceiveProps(newState) {
+      debugger
         this.setState({ workouts: newState.workouts });
     }
 
