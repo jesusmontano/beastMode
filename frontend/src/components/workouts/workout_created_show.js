@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => {
     return {
         fetchWorkouts: () => dispatch(fetchWorkouts()),
         fetchAllExercises: () => dispatch(fetchAllExercises()),
-        updateWorkout: data => dispatch(updateWorkout(data))
+        updateWorkout: data => dispatch(updateWorkout(data)),
     };
 };
 
@@ -32,16 +32,21 @@ class WorkoutCreateShow extends React.Component {
         });
 
         this.state = {
-            rating: ""
+            rating: "", 
+            clicked: false
         };
+    
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChangeRating = this.handleChangeRating.bind(this);
+        this.popRating = this.popRating.bind(this);
+        this.on = this.on.bind(this);
     }
 
     popRating(e) {
         e.preventDefault();
-   
+        this.setState({clicked: true})
+        this.on();
     }
 
     componentDidMount(){
@@ -72,10 +77,17 @@ class WorkoutCreateShow extends React.Component {
         this.setState({ rating: event.target.value });
     }
 
+    on() {
+    document.getElementById( "overlay" ).style.display = "block";
+    }
+
+    
+
     render(){
 
         if (this.state.rating !== "") {
-            return (this.handleSubmit());
+            this.handleSubmit();
+            return ""
         }
 
 
@@ -106,6 +118,7 @@ class WorkoutCreateShow extends React.Component {
         
         return(
             <div className= "fullscreen-workout">
+                <div id="overlay"></div>
                 <video autoPlay loop id="background-video">
                     <source src={ process.env.PUBLIC_URL + '/image-assets/workout-background.mp4' } type="video/mp4"></source>
                 </video>
@@ -135,10 +148,10 @@ class WorkoutCreateShow extends React.Component {
                 
                 <button onClick={this.popRating}>Finish Workout!</button>
 
-                <div className="raiting-div">
-                    <form onSubmit={this.handleSubmit}>
+                <div className="rating-container">
+                        <form className={this.state.clicked ? "rating-div" : "none"}>
                         <div id="rate">Rate and Save Your Workout!</div>
-                            <fieldset class="rating" OnChange={ this.handleChangeRating }>
+                            <fieldset class="rating" onChange={ this.handleChangeRating } onSubmit={ this.handleSubmit }>
                                 <input type="radio" id="star5" name="rating" value="5" />
                                     <label class="full" for="star5" title="I feel like a beast!"></label>
                             
