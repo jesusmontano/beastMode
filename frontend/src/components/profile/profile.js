@@ -1,5 +1,5 @@
 import React from 'react';
-import WorkoutBox from '../workouts/workout_show';
+import WorkoutShow from '../workouts/workout_show';
 
 export default class Profile extends React.Component {
     constructor(props) {
@@ -10,9 +10,9 @@ export default class Profile extends React.Component {
         }
     }
 
-    componentWillMount() {
-        console.log(this.props.currentUser.id)
+    componentDidMount() {
         this.props.fetchUserWorkouts(this.props.currentUser.id);
+        this.props.fetchAllExercises();
     }
 
     componentWillReceiveProps(newState) {
@@ -20,15 +20,24 @@ export default class Profile extends React.Component {
     }
 
     render() {
-        if (this.state.workouts.length === 0) {
+        if (this.props.loggedIn === false) {
+            return(
+                <div>You must be logged in to view this page.</div>
+            )
+        }
+
+        if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return (<div>You haven't created any worksouts yet</div>)
         } else {
             return (
                 <div>
                     <h2>All of Your Workouts!</h2>
-                    {this.state.workouts.map(workout => (
-                        <WorkoutBox key={workout._id} workout={workout} />
-                    ))}
+                    <ul>
+                        {this.props.workouts.map(workout => (
+                            
+                            <WorkoutShow key={workout._id} workout={workout} exercises={this.props.exercises}/>
+                        ))}
+                    </ul>
                 </div>
             );
         }

@@ -10,6 +10,7 @@ import ExerciseContainer from './exercise/exercise_container';
 import WorkoutsContainer from './workouts/workouts_container';
 import WorkoutCreateContainer from './workouts/workout_create_container';
 import WorkoutCreateShow from './workouts/workout_created_show';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => (
     <div>
@@ -20,6 +21,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
             <AuthRoute exact path="/exercises" component={ExerciseContainer} />
             <Route exact path="/workouts" component={WorkoutsContainer} />
+            <ProtectedRoute exact path="/profile" component={ProfileContainer} />
             <Route exact path="/new_workout" component={WorkoutCreateContainer} />
             <Route exact path="/workout_show/:workoutId" component={WorkoutCreateShow} />
         </Switch>
