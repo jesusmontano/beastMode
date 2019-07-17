@@ -2,14 +2,18 @@ import { connect } from 'react-redux';
 import { fetchWorkouts, updateWorkout } from '../../actions/workout_actions';
 import { fetchAllExercises } from '../../actions/exercise_actions';
 import React from 'react';
+var ObjectId = require('mongodb').ObjectID;
+var mongoose = require('mongoose');
 
 const mapStateToProps = (state, ownProps) => {
     const workoutId = ownProps.match.params.workoutId;
+    const userId = state.session.user.id;
 
     return {
         workouts: Object.values(state.workouts.all) || [],
         exercises: state.exercises.all || [],
-        workoutId: workoutId
+        workoutId: workoutId,
+        userId: userId || null
     };
 };
 
@@ -32,7 +36,8 @@ class WorkoutCreateShow extends React.Component {
         });
 
         this.state = {
-            rating: ""
+            rating: "",
+            user_id: this.props.userId
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -61,6 +66,10 @@ class WorkoutCreateShow extends React.Component {
 
         let workoutObj = workoutArr[0];
         workoutObj.rating = this.state.rating;
+        
+        if (this.state.user_id !== null) {
+            workoutObj.user_id = this.state.user_id;
+        }
 
         this.props.updateWorkout(workoutObj)
             .then((workout) => {

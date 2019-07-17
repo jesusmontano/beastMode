@@ -43,7 +43,9 @@ export default class WorkoutCreate extends React.Component {
         });
 
 
-        if (equipmentAndCategory.length < 3) {
+        
+        while (equipmentAndCategory.length < 3) {
+
             this.props.exercises.filter(exercise => {
                 if ( exercise.body_part === "Abdominals" && exercise.equipment === false ) {
                     equipmentAndCategory.push(exercise);
@@ -69,6 +71,13 @@ export default class WorkoutCreate extends React.Component {
         });
 
 
+        while (fatiguedAdjusted.length < 3) {
+            this.props.exercises.filter(exercise => {
+                if (exercise.body_part === "Abdominals" && exercise.equipment === false) {
+                    fatiguedAdjusted.push(exercise);
+                }
+            });
+        };
 
 
         let seletctedExercises = fatiguedAdjusted.sort(() => 0.5 - Math.random()).slice(0, 3);
