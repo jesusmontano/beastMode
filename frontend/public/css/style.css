@@ -421,11 +421,9 @@ input[type="radio"] {
 .workout-container{
     width: 30vw;
     color: white;
-    /* position: absolute; */
-    top: 0;
-    /* left: 39vw; */
+    top: 10vh;
     min-height: 48vh;
-    padding: 1vh 1vw;
+    padding: 4vh 1vw;
     text-align: center;
     background-color: rgba(6, 5, 5, 0.776);
     position: relative;
@@ -579,7 +577,7 @@ input[type="radio"] {
   font-family: 'Aldrich', sans-serif;
   background-color: black;
   width: 100vw;
-  height: 100%;
+  height: 130vh;
   color: white;
 }
 
@@ -620,7 +618,7 @@ input[type="radio"] {
 }
 
 .workout-show-exercise-name{
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .workout-show-image{
