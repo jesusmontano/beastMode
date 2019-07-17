@@ -1,0 +1,632 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-image: url("/image-assets/splash.jpg");
+    background-size: 213vw;
+    position: relative;
+    
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: black;
+    position: relative;
+    z-index: 1;
+    top: 1vh;
+}
+
+
+img#logo {
+    width: 25px;
+    height: 30px;
+
+    margin-left: -8vw;
+    position: absolute;
+    left: 9vw;
+}
+
+
+#logo-str{
+    color: white;
+    width: 6vw;
+
+    font-size: 30px;
+    font-family: 'Black Ops One', cursive;
+    position: absolute;
+    left: 8vw;
+}
+#menu{ /*mobile screen optimized. Use text for bigger screen */
+    width: 20px;
+    height: 25px;
+}
+
+.session-links {
+    margin-top: 1vh;
+    /* display: inline-block; */
+    position: absolute;
+    right: 1vw;
+}
+.nav-links {
+    text-decoration: none;
+    font-family: 'Aldrich', sans-serif;
+    color: white;
+    margin: 0vh 2vw 0 0;
+}
+
+.nav-links:hover {
+    box-shadow: 0 5px 5px black;
+}
+
+#begin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 13%;
+    /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+}
+
+button {
+    color:white;
+    cursor: pointer;
+    background: rgb(37, 57, 172);
+    border-radius: 25px;
+    padding: 12px 20px;
+    min-height: 6vh;
+    min-width: 20vw;
+    border: none;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    margin: 0 auto;
+    
+    outline: none;
+}
+
+.link-new-workout{
+    text-decoration: none;
+    color: white;
+}
+#btn-generate{
+    padding: 0 7vw;
+    margin: 30px auto;
+}
+#btn-create{
+    padding: 0 9vw;
+    background: #0481a2;
+}
+
+button:hover{
+    box-shadow: 0 5px 5px black;
+}
+button:focus {
+    box-shadow: 0 0 0;
+}
+
+footer {
+
+}
+/*
+font-family: 'Bahianita', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Aldrich', sans-serif;
+font-family: 'Black Ops One', cursive;
+font-family: 'Space Mono', monospace;
+*/
+
+/* SessionFormStyling */
+.session-form-container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: black;
+    padding-top: 18vh;
+}
+
+.session-form {
+    background-image: url("/image-assets/jesper-aggergaard-oc7tGf44rM0-unsplash.jpg");
+    background-size: 213vw;
+    width: 100vw;
+    height: 50vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+.session-form > input {
+    height: 5vh;
+    width: 58vw;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3px 5px;
+    margin: -9px 86px;
+}
+
+#submit-button{
+    width: 20vw;
+    background: white;
+    color: black;
+    position: relative;
+    left: 18%;
+    top: 9%;
+    border-radius: 30px;
+    outline: none;
+}
+#submit-button:hover {
+    background: green;
+    box-shadow: 0 5px 5px black;
+}
+#submit-button:focus {
+    background: green;
+}
+
+#error-ul{
+    left: 25vw;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    text-align: -webkit-left;
+    width: 56vw;
+    color: white;
+    top: 7vh;
+    position: relative;
+}
+#error-img{
+     height: 10px;
+}
+
+.login-form{
+    background-image: url('/image-assets/victor-freitas-Ovlel6acNac-unsplash.jpg');
+    background-size: 213vw;
+    width: 100vw;
+    height: 50vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+.login-form > input {
+    height: 5vh;
+    width: 58vw;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3px 5px;
+    margin: -9px 86px;
+}
+
+
+
+/* Workout-Generate-Form  */
+
+
+@media (max-width: 1000px) {
+  .options {
+      position: absolute;
+    top: 12vh;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+  }
+.generate-container{
+    height: 80vh;
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    padding-top: 20vh;
+}
+
+.generate-form{
+    width: 80vh;
+
+}
+.fatigue {
+    width: 70vw;
+    height: 55vh;
+    background: rgb(11, 36, 79);
+    padding: 5vh 5vw;
+    left: 10vw;
+    resize: vertical;
+    position: absolute;
+   
+}
+
+legend{
+    color: white;
+    font-size: 27px;
+    font-family: 'Aldrich', sans-serif;;
+    position: absolute;
+    min-width: 15vw;
+    left: 3vw;
+}
+label {
+    color: white;
+    font-size: 17px;
+    font-family: 'Aldrich', sans-serif;
+    display: block;
+    display: inline;
+}
+input[type="radio"] {
+    margin: 3vh 1vw;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline;
+ }
+ .slide {
+  transform: translateX(2000px);
+  transition: all 0.5s;
+
+}
+.category {
+    width: 70vw;
+    height: 55vh;
+    background: rgb(35, 35, 116);
+    padding: 5vh 5vw;
+    left: 10vw;
+    resize: vertical;
+    position: absolute;
+}
+
+
+.equipment {
+    width: 70vw;
+    height: 55vh;
+    background: rgb(34, 47, 69);
+    padding: 5vh 5vw;
+    left: 10vw;
+    resize: vertical;
+    position: absolute;
+}
+}
+
+@media (min-width: 1001px) {
+    .generate-container{
+        height: 80vh;
+        width: 100vw;
+        background-color: black;
+        position: relative;
+        padding-top: 20vh;
+        margin: auto;
+        background-image: url('/image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg');
+        background-size: cover;
+    }
+
+    .generate-form{
+        height: 60vh;
+        width: 50vw;
+        margin: auto;
+
+    }
+    .form-container{
+        position: relative;
+        margin: auto;
+         -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.3s;
+          transition: transform 0.3s;
+          -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+    }
+    .options{
+        justify-content: space-evenly;
+        align-content: center;
+        display: flex;
+        flex-direction: row;
+        width: 44vw;
+    }
+    .category {
+        height: 20vh;
+        width: 40vw;
+        background: rgb(35, 35, 116);
+        padding: 5vh 5vw;
+        margin: auto;
+        display: inline;
+        position: absolute;
+    }
+
+    .equipment {
+        height: 20vh;
+        width: 40vw;
+        background:  rgb(34, 47, 69);
+        padding: 5vh 5vw;
+        margin: auto;
+        display: inline;
+        position: absolute;
+    }
+    .fatigue {
+        height: 20vh;
+        width: 40vw;
+        background: rgb(11, 36, 79);
+        padding: 5vh 5vw;
+        display: inline;
+        position: absolute;
+    }
+
+legend{
+    color: white;
+    font-size: 27px;
+    font-family: 'Aldrich', sans-serif;;
+    margin: auto;
+    padding-top: 12vh;
+}
+label {
+    color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+}
+input[type="radio"] {
+    /* margin: 2vh 1vw; */
+    width: 1.5em;
+    height: 1.5em;
+    display: inline;
+ }
+ 
+ .slide {
+    /* transition: transform 0.7s ease-in-out; */
+    /* animation: myanime 3s; */
+    /* background: rgba(35, 35, 74, 0.913); */
+    /* transform: translateX(4480px) rotateY(-90deg); */
+    transition: 1s ease-out;
+    display: none;
+ }
+/* 
+ @keyframes myanime {
+    50% {;}
+   90%{transform:rotateY(90deg);} 
+   100%{color: transparent;}
+ } */
+ fieldset {
+     margin-left: -2vw;
+ }
+
+
+ 
+}
+
+
+
+
+.fullscreen-workout{
+    width: 100vw;
+    height: 130vh;
+    background-color: black;
+    position:relative
+}
+
+
+#background-video{
+    min-width: 100vw;
+    height: 100vh;
+    /* display: inline; */
+    /* position:relative; */
+}
+
+.banana{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+}
+.workout-container{
+    width: 30vw;
+    color: white;
+    top: 10vh;
+    min-height: 48vh;
+    padding: 4vh 1vw;
+    text-align: center;
+    background-color: rgba(6, 5, 5, 0.776);
+    position: relative;
+    margin: auto;
+
+    
+}
+@keyframes myanimation {
+  0% {background-color: red;}
+  25%{background-color:yellow;}
+  50%{background-color:green;}
+  75%{background-color:blue;}
+  100% {background-color: purple;}
+}
+#workout-title{
+    color: white;
+    font-size: 18px;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
+    padding: 4px;
+    margin: 10px;
+    position: relative;
+    top: -6vh;
+}
+
+
+.workout-container > div {
+    color: white;
+    font-size: 16px;
+    font-family: 'Aldrich', sans-serif;
+    display: inline;
+}
+
+.exercise-img{
+    width: 20vw;
+    height: 22vh;
+    margin: 13px;
+}
+
+
+
+
+/****** Style Star Rating Widget *****/
+
+.rating-div{
+    position: absolute;
+    background-color: black;
+    padding: 16px;
+    top: 46vh;
+    z-index: 5;
+    left: 6vw;
+    
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  display: none;
+}
+
+.none {
+    display: none;
+}
+/* .rating-container{
+    min-width: 100vw;
+    min-height: 130vh;
+    background-color: rgba(0, 0, 0, 0.605);
+    z-index: 4;
+} */
+.rating { 
+  border: none;
+  margin-right: 5vw;
+  margin-top: 3vh;
+  text-align: center;
+}
+#rate {
+    font-family: 'Aldrich', sans-serif;
+    margin-top: 2vh;
+     text-align: center;
+     font-size: 1.6em;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 6px;
+  font-size: 2em;
+  font-family: 'Aldrich', sans-serif;
+  display: inline-block;
+  content: "★";
+  text-align: center;
+  
+}
+
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+  text-align: center;
+}
+
+.loginToRate {
+    margin-top: 3vh;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
+
+.profile-page-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.profile-no-user-container {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    background-image: url("/image-assets/barbell.jpg");
+}
+.no-user-workouts{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Aldrich', sans-serif;
+  display:relative;
+  margin: auto;
+  padding: 25%;
+  color: rgb(18, 17, 17);
+}
+
+
+/* Workout Show */
+.workout-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Aldrich', sans-serif;
+  background-color: black;
+  width: 100vw;
+  height: 130vh;
+  color: white;
+}
+
+.workout-show-title{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 70px;
+}
+
+.workout-show-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 1200px;
+  margin: 30px;
+  background-color: rgb(24, 24, 24);
+  border: 3px solid rgb(41, 41, 41);
+}
+
+.workout-show-header{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.workout-show-rating{
+  font-size: 20px;
+}
+
+.workout-show-exercise{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.workout-show-exercise-name{
+  font-size: 17px;
+  min-height: 4vh;
+}
+
+.workout-show-image{
+  height: 220px;
+  width: 300px;
+}
