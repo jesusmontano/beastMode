@@ -1,32 +1,39 @@
 import React from 'react';
 import WorkoutShow from '../workouts/workout_show';
-
+import { Link } from 'react-router-dom';
 export default class Profile extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor( props ) {
+        super( props );
         this.state = {
             workouts: []
         }
     }
 
     componentDidMount() {
-        this.props.fetchUserWorkouts(this.props.currentUser.id);
+        this.props.fetchUserWorkouts( this.props.currentUser.id );
         this.props.fetchAllExercises();
     }
 
+<<<<<<< HEAD
     componentWillReceiveProps(newState) {
       debugger
         this.setState({ workouts: newState.workouts });
+=======
+    componentWillReceiveProps( newState ) {
+        this.setState( { workouts: newState.workouts } );
+>>>>>>> master
     }
 
     render() {
       if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return (
-              <div className="profile-no-user-container">
-                <div className="no-user-workouts">
-                  You haven't created any worksouts yet!
+                <div className="profile-no-user-container">
+                    <div className="no-user-workouts">
+                        You haven't created any workouts yet!
+                        <br />
+                    <button id="btn-generate"><Link to="/new_workout" className="link-new-workout">Give me a Beast Workout</Link></button>
                 </div>
-              </div>
+                </div>
             )
         } 
         else {
@@ -48,4 +55,3 @@ export default class Profile extends React.Component {
         }
     }
 }
-

@@ -432,15 +432,6 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Back/back_raises.jpg"
   },
   {
-    "name (string)": "Superman",
-    "difficulty (string)": "Beginner",
-    "sets (number)": 4,
-    "reps (number)": 10,
-    "body_part (string)": "Back",
-    "equipment (boolean)": "FALSE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Back/superman.jpg"
-  },
-  {
     "name (string)": "Deadlift",
     "difficulty (string)": "Advanced",
     "sets (number)": 5,
@@ -600,7 +591,7 @@
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_double_Arms_cable_curl.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_double_biceps_cable_curl.jpg"
   },
   {
     "name (string)": "Lying High Cable Curl",
@@ -627,7 +618,7 @@
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/overhead_double_Arms_cable_curl.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/overhead_double_biceps_cable_curl.jpg"
   },
   {
     "name (string)": "Preacher Barbell Curl",
@@ -1176,7 +1167,7 @@
     "reps (number)": 10,
     "body_part (string)": "Legs",
     "equipment (boolean)": "FALSE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Legs/body_weight_squat.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Legs/bodyweight_squat.jpg"
   },
   {
     "name (string)": "Wall-Sit",
@@ -1608,7 +1599,7 @@
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/reverse_incline_dumbbell_rear_delt_raises.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/reverse_incline_rear_delt_raises.jpg"
   },
   {
     "name (string)": "Single-Arm Cable Lateral Raise",
@@ -1617,7 +1608,7 @@
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/single_arm_cable_lateral_raises.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/single_arm_cable_lateral_raise.jpg"
   },
   {
     "name (string)": "Cable External Rotation",
@@ -1698,7 +1689,7 @@
     "reps (number)": 10,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/decline_dumbbell_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/decline_dumbbell_triceps_extension.jpg"
   },
   {
     "name (string)": "Decline EZ-Bar Tricep Extension",
@@ -1707,7 +1698,7 @@
     "reps (number)": 10,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/decline_ez_bar_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/decline_ez_bar_triceps_extension.jpg"
   },
   {
     "name (string)": "Dumbbell Kickback",
@@ -1734,7 +1725,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/kneeling_cable_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/kneeling_cable_triceps_extension.jpg"
   },
   {
     "name (string)": "Low Cable Arms Extension",
@@ -1743,7 +1734,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/low_cable_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/low_cable_triceps_extension.jpg"
   },
   {
     "name (string)": "Lying Cable Arms Extension",
@@ -1752,7 +1743,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_cable_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_cable_triceps_extension.jpg"
   },
   {
     "name (string)": "Lying EZ-Bar Arms Extension",
@@ -1761,7 +1752,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_ez_bar_Arms_extensions.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_ez_bar_triceps_extensions.jpg"
   },
   {
     "name (string)": "Lying Overhead EZ-Bar Tricep Extension",
@@ -1770,7 +1761,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_overhead_ez_bar_tricep_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_overhead_ez_bar_triceps_extension.jpg"
   },
   {
     "name (string)": "Lying Reverse EZ-Bar Arms Extension",
@@ -1779,7 +1770,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_reverse_ez_bar_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_reverse_ez_bar_triceps_extension.jpg"
   },
   {
     "name (string)": "Lying Single-Arm Dumbbell Arms Extension",
@@ -1788,7 +1779,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_single_arm_dumbbell_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_single_arm_dumbbell_triceps_extension.jpg"
   },
   {
     "name (string)": "Lying Tricep Extensions",
@@ -1806,7 +1797,7 @@
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/overhead_dumbbell_Arms_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/overhead_dumbbell_triceps_extension.jpg"
   },
   {
     "name (string)": "Overhead Rope Cable Tricep Extension",
@@ -1851,7 +1842,7 @@
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/rope_Arms_pushdown.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/rope_triceps_pushdown.jpg"
   },
   {
     "name (string)": "Tricep Pushdown",
