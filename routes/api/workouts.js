@@ -5,7 +5,6 @@ const Workout = require('../../models/Workout');
 
 router.get("/test", (req, res) => res.json({ msg: "This is the workouts route" }));
 
-
 // Get all workouts in DB (index)
 router.get('/', (req, res) => {
     Workout.find()
@@ -13,7 +12,6 @@ router.get('/', (req, res) => {
         .then(workouts => res.json(workouts))
         .catch(err => res.status(404).json({ noworkoutsfound: 'No workouts found' }));
 });
-
 
 // Get all workouts by user 
 router.get('/user/:user_id', (req, res) => {
@@ -31,7 +29,6 @@ router.get('/:id', (req, res) => {
         .catch(err =>
             res.status(404).json({ noworkoutsfound: 'No workouts found' }));
 });
-
 
 // Create a workout 
 router.post('/create', (req, res) => {
@@ -54,7 +51,6 @@ router.post('/create', (req, res) => {
         .then(workout => res.json(workout));
 });
 
-
 router.patch('/:id', (req, res) => {
     Workout.findById(req.params.id)
         .then(workout => {
@@ -63,7 +59,5 @@ router.patch('/:id', (req, res) => {
             workout.save().then(workout => res.json(workout)).catch(err => res.status(404).json(err));
     });
 });
-
-
 
 module.exports = router;
