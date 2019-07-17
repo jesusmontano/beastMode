@@ -12,6 +12,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /* align-items: center; */
+    text-align: center;
     background: black;
     position: relative;
     z-index: 1;
@@ -44,7 +46,7 @@ img#logo {
 }
 
 .session-links {
-    margin-top: 1vh;
+    /* margin-top: 3vh; */
     /* display: inline-block; */
     position: absolute;
     right: 1vw;
@@ -53,7 +55,7 @@ img#logo {
     text-decoration: none;
     font-family: 'Aldrich', sans-serif;
     color: white;
-    margin: 0vh 2vw 0 0;
+    margin: 0vh 1vw 0 0;
 }
 
 .nav-links:hover {
@@ -79,7 +81,7 @@ button {
     border-radius: 25px;
     padding: 12px 20px;
     min-height: 6vh;
-    min-width: 20vw;
+    min-width: 15vw;
     border: none;
     font-size: 18px;
     font-family: 'Aldrich', sans-serif;
@@ -411,7 +413,8 @@ input[type="radio"] {
     min-height: 48vh;
     padding: 1vh 1vw;
     text-align: center;
-    animation: myanimation 2s infinite;
+    background-color: rgba(6, 5, 5, 0.776);
+    
 }
 @keyframes myanimation {
   0% {background-color: red;}
@@ -421,18 +424,20 @@ input[type="radio"] {
   100% {background-color: purple;}
 }
 #workout-title{
-    color: black;
+    color: white;
     font-size: 18px;
     font-family: 'Aldrich', sans-serif;
     text-align: center;
     padding: 4px;
     margin: 10px;
+    position: relative;
+    top: -6vh;
 }
 
 
 .workout-container > div {
-    color: pink;
-    font-size: 18px;
+    color: white;
+    font-size: 16px;
     font-family: 'Aldrich', sans-serif;
     display: inline;
 }
@@ -440,6 +445,7 @@ input[type="radio"] {
 .exercise-img{
     width: 20vw;
     height: 22vh;
+    margin: 13px;
 }
 
 
@@ -527,3 +533,59 @@ input[type="radio"] {
   font-weight: bold;
 }
 
+/* Workout Show */
+.workout-show{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Aldrich', sans-serif;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+}
+
+.workout-show-title{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 70px;
+}
+
+.workout-show-container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 1200px;
+  margin: 30px;
+  background-color: rgb(24, 24, 24);
+  border: 3px solid rgb(41, 41, 41);
+}
+
+.workout-show-header{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.workout-show-rating{
+  font-size: 20px;
+}
+
+.workout-show-exercise{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.workout-show-exercise-name{
+  font-size: 20px;
+}
+
+.workout-show-image{
+  height: 220px;
+  width: 300px;
+}

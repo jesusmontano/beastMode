@@ -9,7 +9,6 @@ export default class Profile extends React.Component {
         }
     }
 
-
     componentDidMount() {
         this.props.fetchUserWorkouts(this.props.currentUser.id);
         this.props.fetchAllExercises();
@@ -21,14 +20,7 @@ export default class Profile extends React.Component {
     }
 
     render() {
-
-        if (this.props.loggedIn === false) {
-            return(
-                <div>You must be logged in to view this page.</div>
-            )
-        }
-
-        if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
+      if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return (
               <div className="profile-no-user-container">
                 <div className="no-user-workouts">
@@ -36,15 +28,19 @@ export default class Profile extends React.Component {
                 </div>
               </div>
             )
-
-        } else {
+        } 
+        else {
             return (
-                <div>
-                    <h2>All of Your Workouts!</h2>
+                <div className="workout-show">
+                    <h2 className="workout-show-title">All of Your Workouts!</h2>
                     <ul>
                         {this.props.workouts.map(workout => (
-                            
-                            <WorkoutShow key={workout._id} workout={workout} exercises={this.props.exercises}/>
+                            <WorkoutShow 
+                              key={workout._id} 
+                              workout={workout} 
+                              exercises={this.props.exercises}
+                              fetchUserWorkouts={this.props.fetchUserWorkouts}
+                            />
                         ))}
                     </ul>
                 </div>
