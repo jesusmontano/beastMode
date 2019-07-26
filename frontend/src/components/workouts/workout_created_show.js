@@ -28,19 +28,11 @@ class WorkoutCreateShow extends React.Component {
     constructor(props) {
         super(props);
 
-        let workoutArr = this.props.workouts.filter(workout => {
-            if (workout._id === this.props.workoutId) {
-                return workout;
-            }
-        });
-
         this.state = {
             rating: "", 
             clicked: false,
-            // user_id: this.props.userId
         };
     
-
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChangeRating = this.handleChangeRating.bind(this);
         this.popRating = this.popRating.bind(this);
@@ -86,10 +78,9 @@ class WorkoutCreateShow extends React.Component {
     }
 
     on() {
-    document.getElementById( "overlay" ).style.display = "block";
+        document.getElementById( "overlay" ).style.display = "block";
     }
 
-    // componentWillUnmount(prevProps)
 
     render(){
 
@@ -111,7 +102,6 @@ class WorkoutCreateShow extends React.Component {
         if (workoutArr.length === 0) {
             return null;
         }
-
 
         let workoutObj = workoutArr[0];
         let exerciseArr = this.props.exercises.filter(exercise => {
@@ -165,21 +155,21 @@ class WorkoutCreateShow extends React.Component {
                 <div className="rating-container">
                         <form className={this.state.clicked ? "rating-div" : "none"}>
                         <div id="rate">Rate and Save Your Workout!</div>
-                            <fieldset class="rating" onChange={ this.handleChangeRating } onSubmit={ this.handleSubmit }>
+                            <fieldset className="rating" onChange={ this.handleChangeRating } onSubmit={ this.handleSubmit }>
                                 <input type="radio" id="star5" name="rating" value="5" />
-                                    <label class="full" for="star5" title="I feel like a beast!"></label>
+                                    <label className="full" htmlFor="star5" title="I feel like a beast!"></label>
 
                                 <input type="radio" id="star4" name="rating" value="4" />
-                                    <label class="full" for="star4" title="Pretty good - 4 stars"></label>
+                                    <label className="full" htmlFor="star4" title="Pretty good - 4 stars"></label>
 
                                 <input type="radio" id="star3" name="rating" value="3" />
-                                    <label class="full" for="star3" title="Meh - 3 stars"></label>
+                                    <label className="full" htmlFor="star3" title="Meh - 3 stars"></label>
 
                                 <input type="radio" id="star2" name="rating" value="2" />
-                                    <label class="full" for="star2" title="Kinda bad - 2 stars"></label>
+                                    <label className="full" htmlFor="star2" title="Kinda bad - 2 stars"></label>
 
                                 <input type="radio" id="star1" name="rating" value="1" />
-                                    <label class="full" for="star1" title="Sucks big time - 1 star"></label>
+                                    <label className="full" htmlFor="star1" title="Sucks big time - 1 star"></label>
 
                         </fieldset>
                     </form>

@@ -7,7 +7,6 @@ const mapStateToProps = (state) => {
     return {
         workouts: Object.values(state.workouts.all),
         exercises: state.exercises.all || [],
-        
     };
 };
 
