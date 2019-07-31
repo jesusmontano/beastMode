@@ -82,9 +82,12 @@ class LoginForm extends React.Component {
                             placeholder="Password"
                         />
                         <br />
-                        <input id="submit-button" type="submit" value="Submit" />
-                        {this.renderErrors()}
-                        <button onClick={this.handleGuestSubmit} id="submit-button">Demo Login</button>
+                        
+
+                            <input id="submit-button" type="submit" value="Login" />
+                            {this.renderErrors()}
+                            <button onClick={this.handleGuestSubmit} id="submit-button demo-login">Demo Login</button>
+             
                     </div>
                 </form>
             </div>

@@ -116,39 +116,37 @@ class WorkoutCreateShow extends React.Component {
         return (
             <div className="fullscreen-workout">
                 <div id="overlay"></div>
-                <video autoPlay loop id="background-video">
+                {/* <video autoPlay loop id="background-video">
                     <source src={process.env.PUBLIC_URL + '/image-assets/beast-background.mp4'} type="video/mp4"></source>
-                </video>
+                </video> */}
                 <div className="banana">
                     <div className="workout-container">
-
+                        
                         <div id="workout-title">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
-                        <br />
-
-
+                        <div className="execercise">
                         <div>{exerciseArr[0].name} :
-                <br />
+                             <br />
                             Do {exerciseArr[0].reps} reps for {exerciseArr[0].sets} sets</div>
-                        <br />
+                            
                         <img className="exercise-img" src={exerciseArr[0].image} />
+                        </div>
 
-                        <br />
-
+                        <div className="execercise">
                         <div>{exerciseArr[1].name} :
-                <br />
+                             <br />
                             Do {exerciseArr[1].reps} reps for {exerciseArr[1].sets} sets</div>
-                        <br />
-                        <img className="exercise-img" src={exerciseArr[1].image} />
-                        <br />
 
+                        <img className="exercise-img" src={exerciseArr[1].image} />
+                        </div>
+                        <div className="execercise">
                         <div>{exerciseArr[2].name} :
-                <br />
+                             <br />
                             Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
-                        <br />
+
                         <img className="exercise-img" src={exerciseArr[2].image} />
-                        <br />
-                        <br />
-                        <button onClick={this.popRating}>Finish Workout!</button>
+                        </div>
+                    </div>
+                        <button className="rating-button" onClick={this.popRating}>Finish Workout!</button>
 
 
                         <div className="rating-container">
@@ -174,7 +172,7 @@ class WorkoutCreateShow extends React.Component {
                             </form>
                             <div className={this.props.userId ? "none" : "loginToRate"}>Login to save this workout.</div>
                         </div>
-                    </div>
+                    
                 </div>
             </div>
         )

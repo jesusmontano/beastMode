@@ -157,7 +157,7 @@ font-family: 'Space Mono', monospace;
     background: white;
     color: black;
     position: relative;
-    left: 18%;
+    left: 6%;
     top: 9%;
     border-radius: 30px;
     outline: none;
@@ -204,8 +204,14 @@ font-family: 'Space Mono', monospace;
     padding: 3px 5px;
     margin: -9px 86px;
 }
+.login-buttons{
+    display: flex;
+    flex-direction: row;
+}
 
+#demo-login{
 
+}
 
 /* Workout-Generate-Form  */
 
@@ -298,7 +304,7 @@ input[type="radio"] {
         position: relative;
         padding-top: 20vh;
         margin: auto;
-        background-image: url('/image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg');
+        /* background-image: url('/image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg'); */
         background-size: cover;
     }
 
@@ -417,19 +423,23 @@ input[type="radio"] {
     width: 100vw;
     height: 100vh;
     top: 0;
+
 }
 .workout-container{
-    width: 30vw;
+
     color: white;
-    top: 10vh;
-    min-height: 48vh;
     padding: 4vh 1vw;
     text-align: center;
     background-color: rgba(6, 5, 5, 0.776);
-    position: relative;
-    margin: auto;
+    height: 50%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 
-    
+}
+.exercise {
+   
 }
 @keyframes myanimation {
   0% {background-color: red;}
@@ -440,13 +450,14 @@ input[type="radio"] {
 }
 #workout-title{
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Aldrich', sans-serif;
+    font-weight: bold;
     text-align: center;
     padding: 4px;
-    margin: 10px;
-    position: relative;
-    top: -6vh;
+    top: 18vh;
+    position: absolute;
+    margin: auto;
 }
 
 
@@ -455,6 +466,8 @@ input[type="radio"] {
     font-size: 16px;
     font-family: 'Aldrich', sans-serif;
     display: inline;
+    margin: 2%;
+
 }
 
 .exercise-img{
@@ -474,7 +487,7 @@ input[type="radio"] {
     padding: 16px;
     top: 46vh;
     z-index: 5;
-    left: 6vw;
+    left: 35vw;
     
 }
 
@@ -496,23 +509,26 @@ input[type="radio"] {
 .none {
     display: none;
 }
-/* .rating-container{
-    min-width: 100vw;
-    min-height: 130vh;
-    background-color: rgba(0, 0, 0, 0.605);
-    z-index: 4;
-} */
+.rating-button{
+    position: absolute;
+    top: 77vh;
+    right: 40vw;
+}
 .rating { 
   border: none;
-  margin-right: 5vw;
+  margin-right: 6vw;
   margin-top: 3vh;
   text-align: center;
 }
 #rate {
     font-family: 'Aldrich', sans-serif;
     margin-top: 2vh;
-     text-align: center;
-     font-size: 1.6em;
+    text-align: center;
+    font-size: 1.6em;
+    color: white;
+}
+br {
+    margin: 3px;
 }
 
 .rating > input { display: none; } 
