@@ -32,12 +32,6 @@ export const fetchWorkouts = () => dispatch => (
         .catch(err => console.log(err))
 );
 
-// export const fetchWorkout = id => dispatch => (
-//     getWorkout(id)
-//         .then(workouts => dispatch(receiveWorkouts(workouts)))
-//         .catch(err => console.log(err))
-// );
-
 export const updateWorkout = data => dispatch => (
     editWorkout(data)
         .then(workout => dispatch(receiveWorkout(workout)))
@@ -50,10 +44,8 @@ export const fetchUserWorkouts = id => dispatch => (
         .catch(err => console.log(err))
 );
 
-export const composeWorkout = data => dispatch => {
- 
-    return (
+export const composeWorkout = data => dispatch => (
     createWorkout(data)
         .then(workout => dispatch(receiveNewWorkout(workout)))
-        .catch(err => console.log(err.response.data)))
-};
+        .catch(err => console.log(err.response.data))
+);

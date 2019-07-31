@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const passport = require('passport');
 const Workout = require('../../models/Workout');
 
 router.get("/test", (req, res) => res.json({ msg: "This is the workouts route" }));
@@ -32,8 +31,6 @@ router.get('/:id', (req, res) => {
 
 // Create a workout 
 router.post('/create', (req, res) => {
-
-    // passport.authenticate('jwt', { session: false })
 
     const newWorkout = new Workout({
         user_id: req.body.user_id,

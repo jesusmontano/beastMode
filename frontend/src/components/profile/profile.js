@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 export default class Profile extends React.Component {
     constructor( props ) {
         super( props );
+
         this.state = {
             workouts: []
-        }
+        };
     }
 
     componentDidMount() {
@@ -28,7 +29,7 @@ export default class Profile extends React.Component {
                     <button id="btn-generate"><Link to="/new_workout" className="link-new-workout">Give me a Beast Workout</Link></button>
                 </div>
                 </div>
-            )
+            );
         }
         else {
             return (

@@ -1,6 +1,6 @@
 import { RECEIVE_WORKOUTS, RECEIVE_USER_WORKOUTS, RECEIVE_NEW_WORKOUT } from '../actions/workout_actions';
 
-const WorkoutsReducer = (state = { all: {}, user: {}, new: undefined }, action) => {
+const WorkoutsReducer = (state = { all: {}, user: {}}, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
 
