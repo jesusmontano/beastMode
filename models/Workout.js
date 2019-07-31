@@ -39,17 +39,7 @@ const WorkoutSchema = new Schema ({
         type: Schema.Types.ObjectId,
         ref: 'exercises',
         required: true
-    },
-    // exercise4_id: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'exercises',
-    //     required: false
-    // },
-    // exercise5_id: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'exercises',
-    //     required: false
-    // },
+    }
 });
 
 const Workout = mongoose.model('workout', WorkoutSchema);

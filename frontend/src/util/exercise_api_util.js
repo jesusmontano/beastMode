@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const getAllExercises = () => {
-  return axios.get('/api/exercises')
+  return axios.get('/api/exercises');
 };
 
 export const getExerciseByBodyPart = (body_part) => {

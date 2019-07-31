@@ -8,20 +8,20 @@ export const receiveAllExercises = (exercises) => {
   return ({
     type: RECEIVE_ALL_EXERCISES,
     exercises: exercises
-  })
+  });
 };
 
 export const receiveExercise = (exercise) => ({
   type: RECEIVE_EXERCISE,
   exercise: exercise
-})
+});
 
 export const fetchAllExercises = () => {
   return dispatch => {
     getAllExercises()
       .then(exercises => dispatch(receiveAllExercises(exercises)))
-      .catch(err => console.log(err))
-  }
+      .catch(err => console.log(err));
+  };
 };
 
 export const fetchExercise = (body_part) => {
@@ -29,7 +29,7 @@ export const fetchExercise = (body_part) => {
     getExerciseByBodyPart(body_part)
       .then(exercise => dispatch(receiveExercise(exercise)))
       .catch(err => console.log(err))
-  }
+  };
 };
 
 export const fetchExerciseByName = (exercise_name) => {
@@ -37,5 +37,5 @@ export const fetchExerciseByName = (exercise_name) => {
     getExerciseByName(exercise_name)
       .then(exercise => dispatch(receiveExercise(exercise)))
       .catch(err => console.log(err))
-  }
-}
+  };
+};
