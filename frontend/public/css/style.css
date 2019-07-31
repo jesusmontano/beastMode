@@ -228,9 +228,11 @@ font-family: 'Space Mono', monospace;
 .generate-container{
     height: 80vh;
     width: 100vw;
-    background-color: black;
+    /* background-color: black; */
     position: relative;
     padding-top: 20vh;
+    background-image: url("/image-assets/barbell2.png");
+    
 }
 
 .generate-form{
@@ -245,7 +247,7 @@ font-family: 'Space Mono', monospace;
     left: 10vw;
     resize: vertical;
     position: absolute;
-   
+    
 }
 
 legend{
@@ -304,7 +306,7 @@ input[type="radio"] {
         position: relative;
         padding-top: 20vh;
         margin: auto;
-        /* background-image: url('/image-assets/zoltan-tasi-0khu-rgbjzo-unsplash.jpg'); */
+        background-image: url('/image-assets/barbell2.png');
         background-size: cover;
     }
 
@@ -317,12 +319,7 @@ input[type="radio"] {
     .form-container{
         position: relative;
         margin: auto;
-         -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-        -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
-          -webkit-transform: rotateY(0);
-          transform: rotateY(0);
+    
     }
     .options{
         justify-content: space-evenly;
@@ -407,7 +404,8 @@ input[type="radio"] {
     width: 100vw;
     height: 130vh;
     background-color: black;
-    position:relative
+    position:relative;
+    background-image: url("/image-assets/gym.png");
 }
 
 
@@ -436,6 +434,7 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    
 
 }
 .exercise {
