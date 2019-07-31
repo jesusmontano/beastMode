@@ -1,11 +1,10 @@
-import { getAllExercises, getExerciseByBodyPart }
+import { getAllExercises, getExerciseByBodyPart, getExerciseByName }
   from '../util/exercise_api_util';
 
 export const RECEIVE_ALL_EXERCISES = 'RECEIVE_ALL_EXERCISES';
 export const RECEIVE_EXERCISE = 'RECEIVE_EXERCISE';
 
 export const receiveAllExercises = (exercises) => {
-  // debugger
   return ({
     type: RECEIVE_ALL_EXERCISES,
     exercises: exercises
@@ -32,3 +31,11 @@ export const fetchExercise = (body_part) => {
       .catch(err => console.log(err))
   }
 };
+
+export const fetchExerciseByName = (exercise_name) => {
+  return dispatch => {
+    getExerciseByName(exercise_name)
+      .then(exercise => dispatch(receiveExercise(exercise)))
+      .catch(err => console.log(err))
+  }
+}

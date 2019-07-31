@@ -33,6 +33,10 @@ const ExerciseSchema = new Schema({
   image: {
     type: String,
     required: false
+  },
+  instructions: {
+    type: Array,
+    required: false
   }
 })
 
