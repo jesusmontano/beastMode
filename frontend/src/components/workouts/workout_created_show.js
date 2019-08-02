@@ -122,7 +122,7 @@ class WorkoutCreateShow extends React.Component {
                 <div className="banana">
                     <div className="workout-container">
                         
-                        <div id="workout-title">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
+                        <div id="workout-title">{workoutObj.category} Workout {workoutObj.equipment ? "With Equipment" : "Without Equipment"}</div>
                         <div className="execercise">
                         <div>{exerciseArr[0].name} :
                              <br />
