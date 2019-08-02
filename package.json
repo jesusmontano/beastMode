@@ -11,8 +11,7 @@
     "frontend": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
     "seed": "node seeds.js",
-    "seed-inspect": "node --inspect-brk seeds.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "seed-inspect": "node --inspect-brk seeds.js"
   },
   "author": "",
   "license": "ISC",
