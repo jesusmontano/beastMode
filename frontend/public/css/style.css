@@ -613,7 +613,7 @@ br {
   text-align: center;
   align-items: center;
   width: 1200px;
-  margin: 30px;
+  /* margin: 30px; */
   background-color: rgb(24, 24, 24);
   border: 3px solid rgb(41, 41, 41);
 }
@@ -621,6 +621,8 @@ br {
 .workout-show-header{
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
+  width: 50%;
 }
 
 .workout-show-rating{
