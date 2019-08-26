@@ -1,7 +1,8 @@
 # beastMode
 
 BeastMode is a customized workout generator for the beginner to experienced athlete.
-[Live Demo]
+
+[Live Demo](http://beastmodepro.herokuapp.com/#/)
 
 ### Technologies
 * React
