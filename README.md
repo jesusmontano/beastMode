@@ -27,4 +27,6 @@ BeastMode is a customized workout generator for the beginner to experienced athl
 <img width="1440" alt="Profile" src="https://user-images.githubusercontent.com/7242067/63716202-45e68f00-c7fa-11e9-8ba6-272cdc29e6ea.png">
 
 ### Future Implementations
-* Music with workouts
+* Music with workouts depending on workout intensity.
+* Extensive workout library with detailed explanations of each exercise.
+* Options to design personal workout plans.
