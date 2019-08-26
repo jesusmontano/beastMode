@@ -1,6 +1,6 @@
 # beastMode
 
-BeastMode is a customized workout generator for the beginner to experienced athlete. The application features a workout form to create a workout depending on the muscle group, access to equipment, and level of fatigue.
+BeastMode is a customized workout generator for the beginner to experienced athlete. The application features a workout form to create workouts depending on the muscle group, access to equipment, and level of fatigue. Users can design quick workouts and track each workout's experience.
 
 [Live Demo](http://beastmodepro.herokuapp.com/#/)
 
@@ -16,12 +16,12 @@ BeastMode is a customized workout generator for the beginner to experienced athl
 * AWS
 
 ### Features
-<img width="1440" alt="Home" src="https://user-images.githubusercontent.com/7242067/63716203-45e68f00-c7fa-11e9-8ecc-1334d659cc0e.png">
 Home Page
+<img width="1440" alt="Home" src="https://user-images.githubusercontent.com/7242067/63716203-45e68f00-c7fa-11e9-8ecc-1334d659cc0e.png">
 
 ## Login Features
 <img width="1440" alt="Login" src="https://user-images.githubusercontent.com/7242067/63716204-467f2580-c7fa-11e9-8bda-8395b935adcb.png">
-* Implemented user authentication to enable users to login and signup to access profile page. Users have access to demo login if they do not have an account.
+* The application includes user authentication to enable users to login and signup and access their profile page. Users have access to demo login if they do not have an account.
 
 ## Workout Page
 <img width="1440" alt="Workout-Page" src="https://user-images.githubusercontent.com/7242067/63716205-467f2580-c7fa-11e9-821f-259a4424b7f1.png">
