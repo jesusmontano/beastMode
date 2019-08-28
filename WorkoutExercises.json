@@ -1716,7 +1716,7 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/inline_ez_bar_tricep_extension.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/inline_ez_bar_triceps_extension.jpg"
   },
   {
     "name (string)": "Kneeling Cable Triceps Extension",

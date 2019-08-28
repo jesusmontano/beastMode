@@ -2,12 +2,10 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import WorkoutShow from './workout_show';
 
-
 // workouts index 
 class Workout extends React.Component {
     constructor(props) {
         super(props);
-
     }
 
     componentWillMount() {
@@ -15,10 +13,7 @@ class Workout extends React.Component {
         this.props.fetchAllExercises();
     }
 
-
     render() {
-        
-
         if (this.props.workouts.length === 0 || this.props.exercises.length === 0) {
             return (<div>No workouts yet!</div>)
         } else {

@@ -168,12 +168,34 @@ export default class WorkoutCreate extends React.Component {
                     <form onSubmit={ this.handleSubmit } className="generate-form">
                             <fieldset className={ this.state.category === "" ? "category form-container" : "slide" } value={ this.state.category } onChange={ this.handleChangeCategory }>
                                     <legend> What do you want to work out?</legend>
-                                    <div className="options">
-                                        <input type="radio" name="category" value="Arms"></input><label>Arms</label>
-                                        <input type="radio" name="category" value="Shoulders"></input><label>Abdominals</label>
-                                        <input type="radio" name="category" value="Chest"></input><label>Chest</label>
-                                        <input type="radio" name="category" value="Back"></input><label>Back</label>
-                                        <input type="radio" name="category" value="Legs"></input><label>Legs</label>
+                                    {/* <div className="options"> */}
+                                    <div className="body-part-options">
+
+                                      <div className="body-part">
+                                        <label>Arms</label>
+                                        <input type="radio" name="category" value="Arms"></input>
+                                      </div>
+
+                                      <div className="body-part">
+                                        <label>Abdominals</label>
+                                        <input type="radio" name="category" value="Shoulders"></input>
+                                      </div>              
+
+                                      <div className="body-part">
+                                        <label>Chest</label>
+                                        <input type="radio" name="category" value="Chest"></input>
+                                      </div>
+
+                                      <div className="body-part">
+                                        <label>Back</label>
+                                        <input type="radio" name="category" value="Back"></input>
+                                      </div>
+                                        
+                                      <div className="body-part">
+                                        <label>Legs</label>
+                                        <input type="radio" name="category" value="Legs"></input>
+                                      </div>
+                                        
                                     </div>
                             </fieldset>
 
@@ -181,11 +203,21 @@ export default class WorkoutCreate extends React.Component {
 
                         <fieldset className={ this.state.fatigue === "" ? "fatigue form-container" : "slide" } value={ this.state.fatigue } onChange={ this.handleChangeFatigue }>
                             <legend>What's your level of fatigue?</legend>
-                            <div className="options">
-
-                                <input type="radio" name="fatigue" value="0"></input><label>PUMPED!</label>
-                                <input type="radio" name="fatigue" value="1"></input><label>Neither</label>
-                                <input type="radio" name="fatigue" value="2"></input><label>TIRED..</label>
+                            {/* <div className="options"> */}
+                            <div className="fatigue-options">
+                              <div className="pumped">
+                                <label>PUMPED!</label>
+                                <input type="radio" name="fatigue" value="0"></input>
+                              </div>
+                              <div className="neither">
+                                <label>Neither</label>
+                                <input type="radio" name="fatigue" value="1"></input>
+                              </div>  
+                              <div className="tired">
+                                <label>TIRED..</label>
+                                <input type="radio" name="fatigue" value="2"></input>
+                              </div>
+                                
                             </div>
                         </fieldset>
 
@@ -193,9 +225,19 @@ export default class WorkoutCreate extends React.Component {
                         <fieldset className={ this.state.equipment === "" ? "equipment form-container" : "slide" } value={ this.state.equipment } onChange={ this.handleChangeEquipment } >
 
                             <legend>Do you have access to gym equipment?</legend>
-                         <div className="options">
-                            <input id="equipment" type="radio" name="equipment" value="yes"></input><label id="equipment" >Yes</label>
-                            <input id="equipment" type="radio" name="equipment" value="no"></input><label id="equipment" >No</label>
+                         {/* <div className="options"> */}
+                         <div className="equipment-options">
+                  
+                            <div className="yes">
+                              <label id="equipment" >Yes</label>
+                              <input id="equipment-option" type="radio" name="equipment" value="yes"></input>
+                            </div>
+                            
+                            <div className="no">
+                              <label id="equipment" >No</label>
+                              <input id="equipment-option" type="radio" name="equipment" value="no"></input>
+                            </div>
+                            
                          </div>
                         </fieldset>
 
