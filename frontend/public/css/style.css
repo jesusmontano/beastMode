@@ -135,11 +135,12 @@ font-family: 'Space Mono', monospace;
     background-image: url("/image-assets/jesper-aggergaard-oc7tGf44rM0-unsplash.jpg");
     background-size: 213vw;
     width: 100vw;
-    height: 50vh;
+    height: 75vh;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
 }
+
 .session-form > input {
     height: 5vh;
     width: 58vw;
@@ -318,13 +319,70 @@ input[type="radio"] {
           -webkit-transform: rotateY(0);
           transform: rotateY(0);
     }
-    .options{
+
+    .equipment-options {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+
+    .yes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .no {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fatigue-options {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .pumped {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .neither {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tired {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .body-part-options {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    .body-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* .options{
         justify-content: space-evenly;
-        align-content: center;
+        align-items: center;
         display: flex;
         flex-direction: row;
         width: 44vw;
+    } */
+    #equipment-option{
+      margin: 10px;
     }
+
     .category {
         height: 20vh;
         width: 40vw;
@@ -333,6 +391,7 @@ input[type="radio"] {
         margin: auto;
         display: inline;
         position: absolute;
+        border-radius: 15px;
     }
 
     .equipment {
@@ -343,6 +402,7 @@ input[type="radio"] {
         margin: auto;
         display: inline;
         position: absolute;
+        border-radius: 15px;
     }
     .fatigue {
         height: 20vh;
@@ -351,6 +411,7 @@ input[type="radio"] {
         padding: 5vh 5vw;
         display: inline;
         position: absolute;
+        border-radius: 15px;
     }
 
 legend{
@@ -554,7 +615,6 @@ input[type="radio"] {
   display: flex;
   justify-content: center;
   flex-direction: column;
-
 }
 .profile-no-user-container {
     width: 100vw;
@@ -572,7 +632,6 @@ input[type="radio"] {
   color: rgb(18, 17, 17);
 }
 
-
 /* Workout Show */
 .workout-show{
   display: flex;
@@ -581,7 +640,7 @@ input[type="radio"] {
   font-family: 'Aldrich', sans-serif;
   background-color: black;
   width: 100vw;
-  height: 130vh;
+  height: 100vh;
   color: white;
 }
 
