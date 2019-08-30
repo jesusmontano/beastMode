@@ -47,7 +47,7 @@ class SignupForm extends React.Component {
             <ul id="error-ul">
                 {Object.keys(this.state.errors).map((error, i) => (
                     <li key={`error-${i}`} id="error-li">
-                        <img id="error-img" src={ process.env.PUBLIC_URL + '/image-assets/exclamation-white.png'}/>{this.state.errors[error]}
+                        <img id="error-img" src={ process.env.PUBLIC_URL + '/image-assets/exclamation-white.png'} alt="exclamation"/>{this.state.errors[error]}
                     </li>
                 ))}
             </ul>

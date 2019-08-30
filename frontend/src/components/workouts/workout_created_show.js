@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import { fetchWorkouts, updateWorkout } from '../../actions/workout_actions';
 import { fetchAllExercises } from '../../actions/exercise_actions';
 import React from 'react';
-var ObjectId = require('mongodb').ObjectID;
-var mongoose = require('mongoose');
+// var ObjectId = require('mongodb').ObjectID;
+// var mongoose = require('mongoose');
 
 const mapStateToProps = (state, ownProps) => {
     const workoutId = ownProps.match.params.workoutId;
@@ -128,7 +128,7 @@ class WorkoutCreateShow extends React.Component {
                              <br />
                             Do {exerciseArr[0].reps} reps for {exerciseArr[0].sets} sets</div>
                             
-                        <img className="exercise-img" src={exerciseArr[0].image} />
+                        <img className="exercise-img" src={exerciseArr[0].image} alt="image1"/>
                         </div>
 
                         <div className="execercise">
@@ -136,14 +136,14 @@ class WorkoutCreateShow extends React.Component {
                              <br />
                             Do {exerciseArr[1].reps} reps for {exerciseArr[1].sets} sets</div>
 
-                        <img className="exercise-img" src={exerciseArr[1].image} />
+                        <img className="exercise-img" src={exerciseArr[1].image} alt="image2"/>
                         </div>
                         <div className="execercise">
                         <div>{exerciseArr[2].name} :
                              <br />
                             Do {exerciseArr[2].reps} reps for {exerciseArr[2].sets} sets</div>
 
-                        <img className="exercise-img" src={exerciseArr[2].image} />
+                        <img className="exercise-img" src={exerciseArr[2].image} alt="image3"/>
                         </div>
                     </div>
                         <button className="rating-button" onClick={this.popRating}>Finish Workout!</button>

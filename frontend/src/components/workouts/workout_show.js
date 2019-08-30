@@ -26,7 +26,6 @@ class WorkoutShow extends React.Component {
                     <img className="workout-show-image" src={exerciseArr[0].image} />
                 </div>
 
-
                 <div className="workout-show-exercise">
                     <p className="workout-show-exercise-name">{exerciseArr[1].name}</p>
                     <img className="workout-show-image" src={exerciseArr[1].image} />

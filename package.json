@@ -28,6 +28,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "react-animation": "^1.1.1",
+    "tar": "^4.4.10",
     "validator": "^11.1.0"
   },
   "devDependencies": {

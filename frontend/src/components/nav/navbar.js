@@ -38,7 +38,7 @@ class NavBar extends React.Component {
         return (
             <div className="nav">
                 <Link to="/">
-                  <img id="logo" src={process.env.PUBLIC_URL + '/image-assets/logo-white.png'} />
+                  <img id="logo" src={process.env.PUBLIC_URL + '/image-assets/logo-white.png'} alt="beast-mode-logo"/>
                   <h1 id="logo-str">BEASTMODE</h1>
                 </Link>
                 {this.getLinks()}
