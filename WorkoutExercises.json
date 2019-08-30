@@ -585,7 +585,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_cable_curl.jpg"
   },
   {
-    "name (string)": "Lying Double Biceps Cable Curl",
+    "name (string)": "Lying Double Arms Cable Curl",
     "difficulty (string)": "Intermediate",
     "sets (number)": 4,
     "reps (number)": 12,
@@ -612,7 +612,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/machine_curl.jpg"
   },
   {
-    "name (string)": "Overhead Double Biceps Cable Curl",
+    "name (string)": "Overhead Double Arms Cable Curl",
     "difficulty (string)": "Advanced",
     "sets (number)": 4,
     "reps (number)": 12,
@@ -1167,7 +1167,7 @@
     "reps (number)": 10,
     "body_part (string)": "Legs",
     "equipment (boolean)": "FALSE",
-    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Legs/body_weight_squat.jpg"
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Legs/bodyweight_squat.jpg"
   },
   {
     "name (string)": "Wall-Sit",
@@ -1683,7 +1683,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/machine_dips.jpg"
   },
   {
-    "name (string)": "Decline Dumbbell Triceps Extension",
+    "name (string)": "Decline Dumbbell Arms Extension",
     "difficulty (string)": "Advanced",
     "sets (number)": 3,
     "reps (number)": 10,
@@ -1716,10 +1716,14 @@
     "reps (number)": 8,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
+<<<<<<< HEAD
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/inline_ez_bar_tricep_extension.jpg"
+=======
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/incline_ez_bar_tricep_extension.jpg"
+>>>>>>> 41c1671677fdfb88a54b1ed7b880d2f500f70671
   },
   {
-    "name (string)": "Kneeling Cable Triceps Extension",
+    "name (string)": "Kneeling Cable Arms Extension",
     "difficulty (string)": "Beginner",
     "sets (number)": 5,
     "reps (number)": 8,
@@ -1728,7 +1732,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/kneeling_cable_triceps_extension.jpg"
   },
   {
-    "name (string)": "Low Cable Triceps Extension",
+    "name (string)": "Low Cable Arms Extension",
     "difficulty (string)": "Intermediate",
     "sets (number)": 5,
     "reps (number)": 8,
@@ -1737,7 +1741,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/low_cable_triceps_extension.jpg"
   },
   {
-    "name (string)": "Lying Cable Triceps Extension",
+    "name (string)": "Lying Cable Arms Extension",
     "difficulty (string)": "Intermediate",
     "sets (number)": 5,
     "reps (number)": 8,
@@ -1746,7 +1750,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_cable_triceps_extension.jpg"
   },
   {
-    "name (string)": "Lying EZ-Bar Triceps Extension",
+    "name (string)": "Lying EZ-Bar Arms Extension",
     "difficulty (string)": "Intermediate",
     "sets (number)": 5,
     "reps (number)": 8,
@@ -1764,7 +1768,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_overhead_ez_bar_triceps_extension.jpg"
   },
   {
-    "name (string)": "Lying Reverse EZ-Bar Triceps Extension",
+    "name (string)": "Lying Reverse EZ-Bar Arms Extension",
     "difficulty (string)": "Advanced",
     "sets (number)": 5,
     "reps (number)": 8,
@@ -1773,7 +1777,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_reverse_ez_bar_triceps_extension.jpg"
   },
   {
-    "name (string)": "Lying Single-Arm Dumbbell Triceps Extension",
+    "name (string)": "Lying Single-Arm Dumbbell Arms Extension",
     "difficulty (string)": "Beginner",
     "sets (number)": 5,
     "reps (number)": 8,
@@ -1791,7 +1795,7 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/lying_tricep_extensions.jpg"
   },
   {
-    "name (string)": "Overhead Dumbbell Triceps Extension",
+    "name (string)": "Overhead Dumbbell Arms Extension",
     "difficulty (string)": "Beginner",
     "sets (number)": 3,
     "reps (number)": 12,
@@ -1836,13 +1840,17 @@
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/reverse_tricep_pushdown.jpg"
   },
   {
-    "name (string)": "Rope Triceps Pushdown",
+    "name (string)": "Rope Arms Pushdown",
     "difficulty (string)": "Intermediate",
     "sets (number)": 3,
     "reps (number)": 12,
     "body_part (string)": "Arms",
     "equipment (boolean)": "TRUE",
+<<<<<<< HEAD
     "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/rope_tricep_pushdown.jpg"
+=======
+    "Image (string)": "https://beast-mode-seeds.s3-us-west-1.amazonaws.com/Arms/rope_triceps_pushdown.jpg"
+>>>>>>> 41c1671677fdfb88a54b1ed7b880d2f500f70671
   },
   {
     "name (string)": "Tricep Pushdown",

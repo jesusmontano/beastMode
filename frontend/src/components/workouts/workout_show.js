@@ -13,6 +13,8 @@ class WorkoutShow extends React.Component {
         }
 
         return (
+          
+          <div className="workout-show-container">
 
             <div className="workout-show-container">
 
@@ -35,8 +37,8 @@ class WorkoutShow extends React.Component {
                     <p className="workout-show-exercise-name">{exerciseArr[2].name}</p>
                     <img className="workout-show-image" src={exerciseArr[2].image} />
                 </div>
-
             </div>
+          </div>
         );
     }
 }

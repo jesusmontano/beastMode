@@ -9,6 +9,8 @@ import jwt_decode from 'jwt-decode';
 import { setAuthToken } from './util/session_api_util';
 import { logout } from './actions/session_actions';
 
+import { fetchUserWorkouts } from './actions/workout_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     
@@ -40,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     // Render our root component and pass in the store as a prop
     const root = document.getElementById('root');
+
+    window.fetchUserWorkouts = fetchUserWorkouts;
 
     ReactDOM.render(<Root store={store} />, root);
 });

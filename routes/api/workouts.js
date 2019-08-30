@@ -23,7 +23,8 @@ router.get('/user/:user_id', (req, res) => {
 
 // Get workout by id 
 router.get('/:id', (req, res) => {
-    Workout.findById(req.params.id)
+    // Workout.findById(req.params.id)
+    Workout.find({ _id: req.params.id })
         .then(workout => res.json(workout))
         .catch(err =>
             res.status(404).json({ noworkoutsfound: 'No workouts found' }));

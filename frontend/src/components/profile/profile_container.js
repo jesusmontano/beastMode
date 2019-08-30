@@ -4,6 +4,7 @@ import { fetchAllExercises } from '../../actions/exercise_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state) => {
+  debugger
     return {
         workouts: Object.values(state.workouts.user),
         currentUser: state.session.user,
@@ -15,7 +16,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchUserWorkouts: id => dispatch(fetchUserWorkouts(id)),
-        fetchAllExercises: () => dispatch(fetchAllExercises())
+        fetchAllExercises: () => dispatch(fetchAllExercises()),
     };
 };
 
