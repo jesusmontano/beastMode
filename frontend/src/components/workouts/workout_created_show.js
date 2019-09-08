@@ -120,9 +120,9 @@ class WorkoutCreateShow extends React.Component {
                     <source src={process.env.PUBLIC_URL + '/image-assets/beast-background.mp4'} type="video/mp4"></source>
                 </video> */}
                 <div className="banana">
+                    <div id="workout-title">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
                     <div className="workout-container">
                         
-                        <div id="workout-title">{workoutObj.category} Workout {workoutObj.equipment ? "with equipment" : "without equipment"}</div>
                         <div className="execercise">
                         <div>{exerciseArr[0].name} :
                              <br />
@@ -145,8 +145,8 @@ class WorkoutCreateShow extends React.Component {
 
                         <img className="exercise-img" src={exerciseArr[2].image} />
                         </div>
-                    </div>
                         <button className="rating-button" onClick={this.popRating}>Finish Workout!</button>
+                    </div>
 
 
                         <div className="rating-container">

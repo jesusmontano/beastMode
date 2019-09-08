@@ -156,6 +156,7 @@ font-family: 'Space Mono', monospace;
     font-family: 'Aldrich', sans-serif;
     font-size: 17px;
     padding: 3px 5px;
+    margin-top: 10px;
 }
 #submit-button:hover {
     background: green;
@@ -212,21 +213,23 @@ font-family: 'Space Mono', monospace;
     font-size: 17px;
     border: none;
     padding: 12px;
+    margin-top: 10px;
 }
 
 .buttons{
     display: flex;
     flex-direction: row;
-    margin-top: 2vh;
     justify-content: space-evenly;
     width: 58vw;
+    padding: 3px 5px;
+    margin: -9px 86px;
 }
 
 /* Mobile View Config */
 
 /* Workout-Generate-Form  */
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
   .options {
     position: absolute;
     top: 16vh;
@@ -256,10 +259,10 @@ font-family: 'Space Mono', monospace;
 }
 legend{
     color: white;
-    font-size: 27px;
+    font-size: 25px;
     font-family: 'Aldrich', sans-serif;;
     position: absolute;
-    min-width: 15vw;
+    max-width: 90%;;
     left: 6vw;
     line-height: 36px;
 }
@@ -300,12 +303,13 @@ input[type="radio"] {
 #equipment{
     min-width: 20%;
 }
-.workout-container{
-    flex-direction: column;
-}
-
 .form-container {
     height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
 }
 
 /* Mobile Login Screen */
@@ -317,6 +321,7 @@ input[type="radio"] {
     align-content: center;
     margin-top: 4vh;
     margin-left: 17vw;
+
 }
 #submit-button {
     width: 25vw;
@@ -328,6 +333,7 @@ input[type="radio"] {
     font-family: 'Aldrich', sans-serif;
     font-size: 17px;
     padding: 10px 20px;
+    margin-top: 10px;
 }
 #demo-login{
     width: 25vw;
@@ -340,6 +346,7 @@ input[type="radio"] {
     font-size: 17px;
     border: none;
     padding: 12px;
+    margin-top: 10px;
 }
 /* 
 Mobile Workout Create Flow */
@@ -349,6 +356,7 @@ Mobile Workout Create Flow */
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
+    width: 83%
 }
 .body-parts >*{
     width: 24%;
@@ -357,21 +365,38 @@ Mobile Workout Create Flow */
 }
 
 /* Mobile Excersie View  */
+
 .workout-container{
-    flex-direction: column;
-    height: 150%;
-    color: white;
+    /* color: white;
     padding: 4vh 1vw;
     text-align: center;
     background-color: rgba(6, 5, 5, 0.776);
-    margin-top: 15%;
     display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    flex-direction: column;
+}
+
+.exercise-img{
+    width: 65vw;
+    height: 25vh;
+}
+.rating-div{
+    left: 8vw;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+.workout-show-container {
+    flex-direction: column;
+    padding: 30px;
+    margin: 0;
 }
 }
 
 /* Desktop Config */
-@media (min-width: 1001px) {
+@media (min-width: 801px) {
     .generate-container{
         height: 80vh;
         width: 100vw;
@@ -390,7 +415,10 @@ Mobile Workout Create Flow */
 
     }
     .form-container{
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
         margin: auto;
     }
     .options{
@@ -486,16 +514,21 @@ input[type="radio"] {
     width: 100vw;
     height: 100vh;
     top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .workout-container{
     color: white;
     padding: 4vh 1vw;
     text-align: center;
     background-color: rgba(6, 5, 5, 0.776);
-    height: 50%;
-    margin-top: 15%;
+    height: 60%;
+    width: 100%;
+    margin-top: 7%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
@@ -508,14 +541,12 @@ input[type="radio"] {
 }
 #workout-title{
     color: white;
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Aldrich', sans-serif;
     font-weight: bold;
     text-align: center;
     padding: 4px;
-    top: 18vh;
-    position: absolute;
-    margin: auto;
+    margin:10px;
 }
 
 
@@ -529,14 +560,10 @@ input[type="radio"] {
 }
 
 .exercise-img{
-    width: 20vw;
-    height: 22vh;
+    width: 24vw;
+    height: 26vh;
     margin: 13px;
 }
-
-
-
-
 /****** Style Star Rating Widget *****/
 
 .rating-div{
@@ -546,7 +573,6 @@ input[type="radio"] {
     top: 46vh;
     z-index: 5;
     left: 35vw;
-    
 }
 
 #overlay {
@@ -599,7 +625,6 @@ br {
   text-align: center;
   
 }
-
 
 .rating > label { 
   color: #ddd; 
@@ -655,7 +680,6 @@ br {
   font-family: 'Aldrich', sans-serif;
   background-color: black;
   width: 100vw;
-  height: 130vh;
   color: white;
 }
 
@@ -672,7 +696,7 @@ br {
   text-align: center;
   align-items: center;
   width: 1200px;
-  margin: 30px;
+  padding: 30px;
   background-color: rgb(24, 24, 24);
   border: 3px solid rgb(41, 41, 41);
 }
