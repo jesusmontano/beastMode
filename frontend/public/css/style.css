@@ -4,8 +4,7 @@ main {
     margin: auto;
     background-image: url("/image-assets/splash.jpg");
     background-size: 213vw;
-    position: relative;
-    
+    position: relative;   
 }
 
 .nav{
@@ -84,7 +83,6 @@ button {
     font-size: 18px;
     font-family: 'Aldrich', sans-serif;
     margin: 0 auto;
-    
     outline: none;
 }
 
@@ -106,10 +104,6 @@ button:hover{
 }
 button:focus {
     box-shadow: 0 0 0;
-}
-
-footer {
-
 }
 /*
 font-family: 'Bahianita', cursive;
@@ -156,11 +150,12 @@ font-family: 'Space Mono', monospace;
     width: 20vw;
     background: white;
     color: black;
-    position: relative;
-    left: 6%;
-    top: 9%;
     border-radius: 30px;
     outline: none;
+    display: inline-block;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    padding: 3px 5px;
 }
 #submit-button:hover {
     background: green;
@@ -204,59 +199,69 @@ font-family: 'Space Mono', monospace;
     padding: 3px 5px;
     margin: -9px 86px;
 }
-.login-buttons{
-    display: flex;
-    flex-direction: row;
-}
+
 
 #demo-login{
-
+    width: 20vw;
+    background: rgb(37, 57, 172);
+    color: white;
+    display: inline-block;
+    border-radius: 30px;
+    outline: none;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    border: none;
+    padding: 12px;
 }
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2vh;
+    justify-content: space-evenly;
+    width: 58vw;
+}
+
+/* Mobile View Config */
 
 /* Workout-Generate-Form  */
 
-
 @media (max-width: 1000px) {
   .options {
-      position: absolute;
-    top: 12vh;
-    align-items: left;
+    position: absolute;
+    top: 16vh;
     display: flex;
-    flex-direction: column;
-    max-width: 90vw;
+    flex-direction: row;
+    width: 70vw;
+    align-items: center;
+    justify-content: space-around;
   }
-.generate-container{
-    height: 80vh;
+  .generate-container{
     width: 100vw;
-    /* background-color: black; */
     position: relative;
     padding-top: 20vh;
     background-image: url("/image-assets/barbell2.png");
-    
+    height: 100vh;
 }
-
 .generate-form{
     width: 80vh;
-
 }
 .fatigue {
     width: 70vw;
-    height: 55vh;
     background: rgb(11, 36, 79);
     padding: 5vh 5vw;
     left: 10vw;
     resize: vertical;
-    position: absolute;
-    
+    position: absolute;   
 }
-
 legend{
     color: white;
     font-size: 27px;
     font-family: 'Aldrich', sans-serif;;
     position: absolute;
     min-width: 15vw;
-    left: 3vw;
+    left: 6vw;
+    line-height: 36px;
 }
 label {
     color: white;
@@ -270,11 +275,9 @@ input[type="radio"] {
     width: 1.5em;
     height: 1.5em;
     display: inline;
- }
- .slide {
-  transform: translateX(2000px);
-  transition: all 0.5s;
-
+}
+.slide {
+    display: none;
 }
 .category {
     width: 70vw;
@@ -285,19 +288,89 @@ input[type="radio"] {
     resize: vertical;
     position: absolute;
 }
-
-
 .equipment {
     width: 70vw;
-    height: 55vh;
+    height: 100vh;
     background: rgb(34, 47, 69);
     padding: 5vh 5vw;
     left: 10vw;
     resize: vertical;
     position: absolute;
 }
+#equipment{
+    min-width: 20%;
+}
+.workout-container{
+    flex-direction: column;
 }
 
+.form-container {
+    height: 30vh;
+}
+
+/* Mobile Login Screen */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 4vh;
+    margin-left: 17vw;
+}
+#submit-button {
+    width: 25vw;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    outline: none;
+    display: inline-block;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    padding: 10px 20px;
+}
+#demo-login{
+    width: 25vw;
+    background: rgb(37, 57, 172);
+    color: white;
+    display: inline-block;
+    border-radius: 30px;
+    outline: none;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 17px;
+    border: none;
+    padding: 12px;
+}
+/* 
+Mobile Workout Create Flow */
+.body-parts{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.body-parts >*{
+    width: 24%;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+/* Mobile Excersie View  */
+.workout-container{
+    flex-direction: column;
+    height: 150%;
+    color: white;
+    padding: 4vh 1vw;
+    text-align: center;
+    background-color: rgba(6, 5, 5, 0.776);
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+}
+}
+
+/* Desktop Config */
 @media (min-width: 1001px) {
     .generate-container{
         height: 80vh;
@@ -319,7 +392,6 @@ input[type="radio"] {
     .form-container{
         position: relative;
         margin: auto;
-    
     }
     .options{
         justify-content: space-evenly;
@@ -367,6 +439,7 @@ label {
     color: white;
     font-size: 18px;
     font-family: 'Aldrich', sans-serif;
+    align-content: center;
 }
 input[type="radio"] {
     /* margin: 2vh 1vw; */
@@ -393,12 +466,7 @@ input[type="radio"] {
      margin-left: -2vw;
  }
 
-
- 
 }
-
-
-
 
 .fullscreen-workout{
     width: 100vw;
@@ -407,24 +475,19 @@ input[type="radio"] {
     position:relative;
     background-image: url("/image-assets/gym.png");
 }
-
-
 #background-video{
     min-width: 100vw;
     height: 100vh;
     /* display: inline; */
     /* position:relative; */
 }
-
 .banana{
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
-
 }
 .workout-container{
-
     color: white;
     padding: 4vh 1vw;
     text-align: center;
@@ -434,12 +497,8 @@ input[type="radio"] {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    
+}
 
-}
-.exercise {
-   
-}
 @keyframes myanimation {
   0% {background-color: red;}
   25%{background-color:yellow;}
