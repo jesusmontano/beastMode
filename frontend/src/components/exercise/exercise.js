@@ -3,13 +3,10 @@ import ExerciseItem from './exercise_item';
 
 class Exercise extends React.Component {
   componentDidMount() {
-    // debugger
     this.props.fetchAllExercises();
-    // debugger
   }
 
   render() {
-    // debugger
     if (!this.props.exercises.length) {
       return (
         <div>There are no exercises.</div>

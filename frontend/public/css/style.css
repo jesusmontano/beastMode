@@ -704,6 +704,8 @@ br {
 .workout-show-header{
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
+  width: 50%;
 }
 
 .workout-show-rating{

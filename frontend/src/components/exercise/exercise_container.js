@@ -4,7 +4,6 @@ import { fetchAllExercises, fetchExercise }
 import Exercise from './exercise';
 
 const mapStateToProps = (state, ownProps) => {
-  // debugger
   return ({
     exercises: state.exercises
   })
