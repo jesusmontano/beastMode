@@ -114,11 +114,11 @@ export default class WorkoutCreate extends React.Component {
                 <form onSubmit={this.handleSubmit} className="generate-form">
                     <fieldset className={this.state.category === "" ? "category form-container" : "slide"} value={this.state.category} onChange={this.handleChangeCategory}>
                         <legend> What do you want to work out?</legend>
-                        <div className="options">
+                        <div className="options body-parts">
                             <input type="radio" name="category" value="Arms"></input><label>Arms</label>
-                            <input type="radio" name="category" value="Shoulders"></input><label>Abdominals</label>
                             <input type="radio" name="category" value="Chest"></input><label>Chest</label>
                             <input type="radio" name="category" value="Back"></input><label>Back</label>
+                            <input type="radio" name="category" value="Shoulders"></input><label>Abdominals</label>
                             <input type="radio" name="category" value="Legs"></input><label>Legs</label>
                         </div>
                     </fieldset>
