@@ -24,7 +24,7 @@
     "fs": "0.0.1-security",
     "heroku": "^7.27.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.6.4",
+    "mongoose": "^5.7.5",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "react-animation": "^1.1.1",
